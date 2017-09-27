@@ -53,7 +53,7 @@
 
 % playing with boxes! and colors to improve presentation of practices.
 \usepackage{framed,color}
-\usepackage{xcolor}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{csquotes}
 \usepackage{array}
 
@@ -66,11 +66,11 @@
 
 % create macros for each person based on initials so they can easily
 % add comments to the paper.
-\newcommand{\cb}[1]{\note[Carly]{#1}}
-\newcommand{\ms}[1]{\note[Peggy]{\todo{(Peggy) #1}}}
-\newcommand{\lm}[1]{\note[Alexey]{#1}}
-\newcommand{\mg}[1]{\note[Matthieu]{#1}}
-\newcommand{\jc}[1]{\note[Cassie]{\todo{(Cassie) #1}}}
+\newcommand{\cl}[1]{\textcolor{blue}{{\it [Carly says: #1]}}}
+\newcommand{\ms}[1]{\textcolor{purple}{{\it [Peggy says: #1]}}}
+\newcommand{\mf}[1]{\textcolor{green}{{\it [Matthieu says: #1]}}}
+\newcommand{\az}[1]{\textcolor{yellow}{{\it [Alexey says: #1]}}}
+\newcommand{\cp}[1]{\textcolor{red}{{\it [Cassie says: #1]}}}
 
 \useunder{\uline}{\ul}{}
 \begin{document}
@@ -211,7 +211,7 @@ Finally, we conclude this column with some considerations and advice for develop
   
 
 \section{Botology: Understanding the landscape of bots}
-
+\cl{Bot-ology?}
 % [Peggy]
 
 \todo{improve and add more examples}
@@ -240,15 +240,13 @@ Finally, bots may be characterized according to their \textbf{purpose}, as we su
 \begin{itemize}
 \item \emph{transactional} bots provide support for user transactions such as...
 \item \emph{informational} bots exist to provide critical information to its users.  For example, the SwingTradeBot\footnote{\url{https://swingtradebot.com/}} helps its users stay on top of the stock market, by watching stocks and scanning the market for important developments and then alerting its users when they may need to take an action on their portfolio. 
-\item \emph{productivity} bots aim to improve a user's or team's productivity by automating rote or tedious tasks such as updating a calendar automatically when you email the bot (see \url{x.ai}), or more sophisticated bots such as Tomatobot\footnote{\url{https://tomatobot.matthewhiggins.me/}} that integrates in Slack that help you follow the Pomodoro Method\footnote{\url{https://blog.trello.com/how-to-pomodoro-your-way-to-productivity}} for boosting one's productivity. 
+\item \emph{productivity} bots aim to improve a user's or team's productivity by automating rote or tedious tasks such as updating a calendar automatically when you email the bot (see \url{x.ai}), or more sophisticated bots such as Tomatobot\footnote{\url{https://tomatobot.matthewhiggins.me/}} that integrates in Slack that help you follow the Pomodoro Method\footnote{\url{https://blog.trello.com/how-to-pomodoro-your-way-to-productivity}} for boosting one's productivity. \cl{tomatobot also silences other notifications}
 \item \emph{collaboration} bots support how users communicate, coordinate or collaborate their tasks.  For example, the Meekan bot\footnote{\url{https://meekan.com/}} helps users coordinate and arrange their schedules to facilitate meetings.  Meekan integrates across a number of different platforms including Slack, Hipchat and Microsoft Teams.
 % I have too many software development examples? 
 \end{itemize}
 	
 	
 \section{How to create Bots and where to host them}
-
-	[Carly]
 
 	Although simple bots can be built from scratch and self-hosted, many developers choose to leverage third-party technologies to streamline the process. With the explosion of new tools to match in the bot development domain, if is important to distinguish between the tools used to build bots (Creation Platforms) and the platforms where they dwell (Distribution Platforms).
 
@@ -261,7 +259,7 @@ Finally, bots may be characterized according to their \textbf{purpose}, as we su
 
 	Launching a bot on an existing platform, helps overcome the cold start problem that many new applications face. Selecting the wrong user base, however, can be equally detrimental. Carefully consider the size and demographics of the user base as well as the cost to access the platform. 
 
-	Distribution platforms also define and standardize how users can interaction with bots.  Commonly support interaction mechanisms include: text, user can communicate with the bots using natural language; commands, users can trigger actions with a set of keywords or phrases; selection, users can choose from a set of presented options; and voice, users can talk to the bots.
+	Distribution platforms also define and standardize how users can interaction with bots.  Commonly support interaction mechanisms include: text (communicate with the bots using natural language), commands (trigger actions with a set of keywords or phrases), selection (choose from a set of presented options), and speech (using voice to interact with the bot).
 
 	Distribution platforms also offer mechanisms promotion or for user discovery of the bots. Similar to Apple's App-Store [x], many distribution platforms offer virtual ``bot stores'' where users browse for bots. Third-party sites (e.g. BotList) also offer online catalogs of bots for many popular distribution platforms. 
 
@@ -279,6 +277,30 @@ Finally, bots may be characterized according to their \textbf{purpose}, as we su
 
 	\subsection{Design guidelines}
 
+	Many of the platforms the support the distribution and creation of bots also provide developers with basic principles or best practices for bot design (Microsoft\footnote{https://docs.microsoft.com/en-us/bot-framework/}, Facebook\footnote{https://developers.facebook.com/docs/messenger-platform/design-resources}, Slack\footnote{https://api.slack.com/best-practices/}).
+
+	In the sections below, we highlight three important design considerations for bots, pulling ideas from the emerging area of human-robot interaction.
+
+	\subsubsection{Don't pretend.}
+
+	Bots should make it clear to the user that they are not speaking with another human.  Make it clear from the start of the conversation, via the name of the bot or by simply informing the user.  This avoids the ``icky'' feeling when the user inevitably figures out they are not speaking to a human.
+
+	Facebook's bot best practices recommends clearly defining expectations with the users.  This includes how often the bot will be responding, what core functionality it supports, and when it is unable to complete a request.  When a bot does not understand, it should reiterate it's capabilities or direct users to it's help functionality.
+
+
+	\subsubsection{Control conversational flow.}
+
+	Help guide the user through their interactions with the bot by avoiding stand alone questions and dead end statements. Help the users understand how to interact with the bot providing a mixed of text based and structured  mechanisms where appropriate.  Clever use of buttons, quick-replies, menus, and other selection elements reduce the number of ``clicks'' required per task.  A bot is more likely to be successful if it solves the user's ``problem better/easier/faster than any of the alternative experiences''\footnote{https://docs.microsoft.com/en-us/bot-framework/bot-design-principles}.
+
+	\cl{Talk about the interaction mechanism options a bit more... also update the other sections to use consistent terminology}
+
+	Implementing global input checks for common navigation keywords (e.g. help, back, cancel, start over, exit), can help avoid the creation of ``stubborn'' or ``clueless'' bots\footnote{https://docs.microsoft.com/en-us/bot-framework/bot-design-principles}. Keywords or commands can also be used to provide accelerators for speeding up for expert or ``mission driven'' user's navigation. 
+
+	\subsubsection{Tone builds personality.}
+
+	The language a bot uses helps define and build its personality.  Conversations with bots are generally considered to be more casual than other company-user communication channels (e.g. websites, emails). But don't go too heavy on the personality, according to Slack, ``A little goes a long way. We cannot say this enough.''\footnote{https://api.slack.com/best-practices/}
+
+	Facebook's guidelines recommend using the active voice, in first or second person\footnote{https://developers.facebook.com/docs/messenger-platform/introduction/design-best-practices}.  Punctuation also plays a large role in the way the bot is perceived, so it can be leveraged to convey emotion but not at the expense of good grammar.  Proper spelling, capitalization, and sentence structure ensure that the meaning behind the message is not lost.  
 
 \section{Takeaways}
 
