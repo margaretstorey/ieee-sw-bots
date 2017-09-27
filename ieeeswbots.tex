@@ -57,6 +57,7 @@
 \usepackage{csquotes}
 \usepackage{array}
 
+\usepackage{footmisc}
 
 %change this to 
 \usepackage[turnoff]{notes}
@@ -186,30 +187,29 @@ XXX\\
 \section{How to create Bots and where to host them}
 	[Carly]
 
-	Although simple chatbots can easily be built from scratch, many developers choose to use a variety of technologies that are currently available. There is a need to distinguish between the platforms used to create bots, and the platforms used to distribute them.
+	There is a need to distinguish between the services used to build bots (Creation Platforms) and the platforms where they live (Distribution Platforms).  Although simple chatbots can be built from scratch and self-hosted, many developers choose to leverage a variety of third-party technologies to streamline the process.
 
-	Many large companies offer platforms that support both the creation and distribution of chatbots: WeChat, Facebook, Microsoft, Telegram, Kik, Slack, Alassian, Teams, etc?
-	Technologies offer parts of the creation or distribution platforms. A summary of popular technologies is shown in table X. 
-
+	Many large companies, such as Microsoft and Facebook for example, offer a comprehensive set of tools to support both the creation and distribution of bots. Other companies, provide specialized solutions for specific aspects of bot creation and distribution. 
 
 	\subsection{Distribution Platforms}
-	Their technical platforms and what is involved to create them (Add a Table / viz similar to the one in the included above to summarize the above)
-	- OSS/Price
-	- Platforms / languages
+	The distribution platforms are where the bots can be accessed by users. Bot distribution platforms can be general purpose, such as FB Messenger, or specific to a domain such as Slack in Software Development.  
 
-	The distribution platforms are where the bots live after they are created.  Distribution platforms offer the following benefits: (1) access to an existing user base, (2) ability to market or promote the bots, and (3) means of monetization\footnote{\label{messenger-vs-skype-vs-slack-vs-telegram-how-to-spot-the-winners-adc34b4ca066}https://medium.com/mobile-lifestyle/messenger-vs-skype-vs-slack-vs-telegram-how-to-spot-the-winners-adc34b4ca066}.  
+	Distribution platforms offer many benefits to developers: access to a user base\footnote{https://medium.com/mobile-lifestyle/messenger-vs-skype-vs-slack-vs-telegram-how-to-spot-the-winners-adc34b4ca066\label{How_to_spot_the_winners}}, defined interactions, marketing\footref{How_to_spot_the_winners}, and collecting payments\footref{How_to_spot_the_winners}.  Launching your bot on a platform that has a stable user base helps overcome the cold start problem that many new applications face. When selecting a user base, consider the size / demographics of the user base and user cost to access platform. The distribution platforms also define and standardize how users can interaction with the bots.  The most common bot interaction mechanisms include text (responding to the bot in natural language), commands (using a set of predefined keywords or phrases), selection (directly clicking on one of the presented options), and sometimes voice.
 
-	The distribution platforms also define how users can interaction with the bots.  Common styles supported are usually voice and/or text.
+	Distribution platforms also offer the ability to market or promote the bots. Popular distribution platforms offer ``bot stores'' where users can go and shop for bots. Many third-party also sites that maintain catalogs of bots across many distribution platforms.  
 
-	\subsection{Design guidelines}
+	Lastly, many distribution channels offer means of collecting payments from users.  This is particularly usefully for transactional bots.
+
+	A summary of the popular distribution platforms and technologies are included in figure X.
 
 	\subsection{Creation Platforms}
 	Developer ecosystem for the different platforms...  plug in to these communities...
 
-	The creation platforms are where the bots are designed and built.  A successful creation platform offers (1) software foundations in the form of APIs, toolsets, services, or frameworks and (2) a developer ecosystem for support \footnotemark{\ref{messenger-vs-skype-vs-slack-vs-telegram-how-to-spot-the-winners-adc34b4ca066}}.
+	The creation platforms are where the bots are designed and built. Creation platforms offer many benefits to developers:  support for specific distribution channels, and a access to an active development community.  A successful creation platform offers software foundations in the form of APIs, tool sets, services, or frameworks and a developer ecosystem for support\footref{How_to_spot_the_winners}. The creation platforms can support the development of bots for specific distribution platforms, or many produce general bots that can be deployed on multiple platforms.  The services they provide range from documentation and code templates to no-code required bot building interfaces.  Surrounding the creation platforms are developers using the same technologies, driving innovation and new use cases for bots.  They provide software expertise in the form of tutorials, articles, discussions, and answering questions.
 
-	Many of the popular distribution platforms also have their own ``bot stores''. Slack's App Directory or Cortana's skills is a great example of this. Users can peruse the various bots that are available, and install their new virtual team members. 
+	A summary of the popular creation platforms and technologies are included in figure X.
 
+	\subsection{Design guidelines}
 
 
 \section{Takeaways}

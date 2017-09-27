@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex ieeeswbots"] 1506398547 "ieeeswbots.aux" "ieeeswbots.bbl" "ieeeswbots" 1506399732
+["bibtex ieeeswbots"] 1506531836 "ieeeswbots.aux" "ieeeswbots.bbl" "ieeeswbots" 1506532466
   "./IEEEtran.bst" 1506395949 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
   "IEEEabrv.bib" 1506395949 20898 a5d2167c380db7dfff810b085c77ed63 ""
   "ieeesw2016.bib" 0 -1 0 ""
-  "ieeeswbots.aux" 1506399731 1886 5d598a5bf933de725bc262577396b3ce ""
+  "ieeeswbots.aux" 1506532466 1858 8ec8cab5ca21c5fb4b0c641d4180742f ""
   "ieeeswbots.bcf" 0 -1 0 ""
   (generated)
-  "ieeeswbots.blg"
   "ieeeswbots.bbl"
-["pdflatex"] 1506399731 "ieeeswbots.tex" "ieeeswbots.pdf" "ieeeswbots" 1506399732
+  "ieeeswbots.blg"
+["pdflatex"] 1506532465 "ieeeswbots.tex" "ieeeswbots.pdf" "ieeeswbots" 1506532466
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768653 4484 b828043cbd581d289d955903c1339981 ""
@@ -85,6 +85,7 @@
   "/usr/local/texlive/2016/texmf-dist/tex/latex/csquotes/csquotes.def" 1454367706 17957 fa38762d0882870185605ef6006bb82d ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/csquotes/csquotes.sty" 1454367706 61475 003441129fdf4a7c533e485780ad0320 ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1438639395 41547 7860e623236f5f726a4099bbb7dd89fb ""
+  "/usr/local/texlive/2016/texmf-dist/tex/latex/footmisc/footmisc.sty" 1312311212 25776 d28bd6d82f168f8cb2268584b67a2a98 ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/framed/framed.sty" 1338588508 22449 7ec15c16d0d66790f28e90343c5434a3 ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1459978653 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1459978653 3103 f32642b1cd56c010cdfb6545539b7f0b ""
@@ -113,14 +114,14 @@
   "/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1485370697 1888048 f2c5faed5981a516f406b2ccc20bff71 ""
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1463979169 3873397 413fbfbbedb8e719ddc392043a7add02 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
-  "ieeeswbots.aux" 1506399731 1886 5d598a5bf933de725bc262577396b3ce ""
+  "ieeeswbots.aux" 1506532466 1858 8ec8cab5ca21c5fb4b0c641d4180742f ""
   "ieeeswbots.bbl" 1506395949 877 628a2a8c68e066122d1514411e0b8455 "bibtex ieeeswbots"
-  "ieeeswbots.out" 1506399731 606 a680b4830c2e840e3922b60d03f3c0aa ""
-  "ieeeswbots.tex" 1506399730 10360 3f64aefbb5589103383af632b2d6105a ""
+  "ieeeswbots.out" 1506532466 606 f570df62b8b16995f628252006185a67 ""
+  "ieeeswbots.tex" 1506532465 11717 479e10ce2ed3e3c0e0168b06d7696bd9 ""
   "notes.sty" 1506395949 3995 4867bbb42692018015834fdb7607823c ""
   "sig-alternate.cls" 1506395949 58095 3c82fd28fb22c25d8dc5facd718fcbbf ""
   (generated)
-  "ieeeswbots.aux"
-  "ieeeswbots.log"
   "ieeeswbots.pdf"
   "ieeeswbots.out"
+  "ieeeswbots.log"
+  "ieeeswbots.aux"

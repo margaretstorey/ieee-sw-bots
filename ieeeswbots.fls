@@ -111,6 +111,8 @@ INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/csquotes/csquotes.cfg
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/csquotes/csquotes.cfg
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/footmisc/footmisc.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/footmisc/footmisc.sty
 INPUT notes.sty
 INPUT notes.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
@@ -161,8 +163,6 @@ INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/latex-fonts/lasy9.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/latex-fonts/lasy5.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/ae/aer6.tfm
-INPUT ieeeswbots.bbl
-INPUT ieeeswbots.bbl
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/adobe/helvetic/phvb8t.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
 INPUT /usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map
@@ -182,6 +182,8 @@ INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/vf/public/ae/aer6.vf
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmu10.tfm
+INPUT ieeeswbots.bbl
+INPUT ieeeswbots.bbl
 INPUT ieeeswbots.aux
 INPUT ./ieeeswbots.out
 INPUT ./ieeeswbots.out
