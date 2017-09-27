@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 SEP 2017 11:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 SEP 2017 11:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -508,20 +508,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--246
  []
 
 (./ieeeswbots.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 313.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 315.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.313 \end{document}
+l.315 \end{document}
                      [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 313.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 315.
  (./ieeeswbots.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 313.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 313.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 315.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 315.
 Package rerunfilecheck Info: File `ieeeswbots.out' has not changed.
 (rerunfilecheck)             Checksum: A6A34BF6D7003DA1566DF1F3FEC167AE;548.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 313.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 315.
  ) 
 Here is how much of TeX's memory you used:
  7915 strings out of 493014
@@ -549,7 +549,7 @@ e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
 onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on ieeeswbots.pdf (2 pages, 91346 bytes).
+Output written on ieeeswbots.pdf (2 pages, 91406 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
