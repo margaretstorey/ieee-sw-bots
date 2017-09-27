@@ -208,36 +208,35 @@ We next provide background for developers on how they can create and host bots o
 In a sidebar, we look at how developers themselves use bots in their development work.  We call out this domain because to quote XXX from StackOverflow, ``developers are writing the script for tomorrow'' and thus we see examples of sophisticated and innovative bots emerging from developer needs that pave the way for how bots may be created for other domains.
 Finally, we conclude this column with some considerations and advice for developers wishing to develop bots for their end users or wishing to use bots within their own development projects.   
 
-
- 
-	
-
-	
-% \section{Why are they so popular now}
-% By renaming the above section we don't need this one.
-	
-%	(timing of platforms and chat environments)
-%	
-%	Is this really new?  
+  
 
 \section{Botology: Understanding the landscape of bots}
-% Peggy: I'm not sure about this title or the approach in here...
-
-\todo{add examples for the following if we go with this approach}
 
 % [Peggy]
 
-It has been surprising to see the rapid development and widespread adoption of bots in just a few years, but what is more surprising is the vast array of bots that support a variety of tasks and roles.  
-Rather than attempting to narrowly define bots or chatbots, instead we look at how they may be categorized. 
+\todo{improve and add more examples}
+
+
+It has been surprising to see the rapid development and widespread adoption of bots in just a few years, but what is more surprising is the vast array of bots that support so many diverse tasks and roles.  
+Rather than attempting to narrowly define bots or chatbots, instead we look at how they may be characterized. 
 
 One way to characterize bots is through the \textbf{interaction model} they provide. 
-Some bots support a domain specific language where the user interacts with the bot using specific commands.  For example,.... 
-Other bots rely more on natural language processing, such as Apple's Siri.
-Bots also differ in terms of whether they support a pull based approach, where the user initiates the interaction (e.g., Hey Siri), or the bot may initiate the interaction based on some system or user context (e.g., ...). 
+Some bots support a domain specific language where the user interacts with the bot using specific commands within a command line interface.  For example, the Felix bot\footnote{\url{http://felixbot.co/}} (which integrates in Slack) boosts personal productivity and a user interacts with Felix using commands such as ``start'' and ``done'' to tell Felix about the status of their personal tasks.   
+Other bots rely tend to rely on natural language processing, such as Apple's Siri.
+Bots also differ in terms of whether they support a pull based approach, where the user initiates the interaction (e.g., a user invokes the bot using commands using ``Hey Siri''), or the bot may initiate the interaction based on some system or user context (e.g., the Poncho weather bot\footnote{\url{https://poncho.is/}} which can be used across several platforms including Facebook Messenger, Viber, Android and iPhone, will warn the user when it is about to rain). 
+% does Poncho do that? I think it does...
 
-Another way to characterize bots is in terms of their \textbf{intelligence}.  Some bots follow very simple logic rules, passing control to a human user if needed (e.g., IFTT), whereas others tend to be more autonomous and learn over time.  For example, ....
+Another way to characterize bots is in terms of their \textbf{intelligence} which we further can characterize as follows:
+\todo{Carly to expand on these bullets}
+\begin{itemize}
+\item \textbf{Adaptation:} How ``context aware'' the bot is and how the bot uses that context to change how it interacts with the user(s).  For example, ....
+\item \textbf{Reasoning:} Some bots follow very simple logic rules (e.g., IFTTT) whereas others bots use more advanced Artificial Intelligence (AI).  For example, ...
+\item \textbf{Autonomy:}  Some bots may be entirely autonomous whereas other bots rely on a human user's input.  For example, ....
+\end{itemize}
 
-Finally, bots may be characterized by the kind of \textbf{tasks} that they support, as we summarize here: 
+
+
+Finally, bots may be characterized according to their \textbf{purpose}, as we summarize here: 
 \begin{itemize}
 \item \emph{transactional} bots provide support for user transactions such as...
 \item \emph{informational} bots provide support for...
@@ -246,11 +245,11 @@ Finally, bots may be characterized by the kind of \textbf{tasks} that they suppo
 \end{itemize}
 	
 	
-
 \section{How to create Bots and where to host them}
+
 	[Carly]
 
-	Although simple bots can be built from scratch and self-hosted, many developers choose to leverage third-party technologies to streamline the process. With the explosion of new tools to match in the bot development domain, if is important to distinguish between the tools used to build bots (Creation Platforms) and the platforms where they live (Distribution Platforms).
+	Although simple bots can be built from scratch and self-hosted, many developers choose to leverage third-party technologies to streamline the process. With the explosion of new tools to match in the bot development domain, if is important to distinguish between the tools used to build bots (Creation Platforms) and the platforms where they dwell (Distribution Platforms).
 
 	Many large companies, such as Microsoft and Facebook for example, offer a comprehensive set of tools to support both the creation and distribution of bots. Other companies, provide specialized solutions for specific aspects of bot creation and distribution. 
 
@@ -283,11 +282,15 @@ Finally, bots may be characterized by the kind of \textbf{tasks} that they suppo
 \section{Takeaways}
 
 [Peggy]
-
-	Bots are everywhere: pay attention to how bots are used around you, in cars, in the home but also watch how other developers use Bots in their development activities (reference FSE visions paper)
+These days, bots are becoming pervasive.  End users experience them in cars, in the home, in entertainment devices and at work.  We see them particularly playing a significant and sophisticated role in many software development projects (as we discussed in the side bar).  
+We suggest that developers learn from these experiences and watch for innovative ways to deploy them in their own projects (to improve their own activities but also as a feature for their end users), but at the same time, not to overuse them! 
+We suggest that careful attention should be paid to the challenges they may introduce including information overload and interruptions.  
 	
+	[Carly]
+Another challenge they may introduce includes privacy intrusion. 
 	Bot ethics:  Reference Asimov's rules for Robots here..   Should this be updated for Bots?
 	
+	[Carly]
 	Bots may ease or increase collaboration friction...  choose Bots not to remove collaboration (and in turn creativity) but use them to enhance collaboration (reference CSCW workshop paper)
 
 
@@ -297,6 +300,7 @@ Finally, bots may be characterized by the kind of \textbf{tasks} that they suppo
 [Peggy]
 
 Software bot usage in software development.
+(reference FSE visions paper)
 
 
 
