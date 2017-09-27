@@ -80,7 +80,10 @@
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
 
-\title{Should ChatBots play a role in your software development project}
+%\title{Should ChatBots play a role in your software development project?}
+%\title{Two Developer Perspectives on Bots:  Creation and Use}
+% or
+\title{How Bots may Play a Role in Your Development Project}
 
 
 
@@ -147,7 +150,7 @@ XXX\\
 %email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
 %(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
 
-\date{28 Sept 2017}
+\date{29 Sept 2017}
 % Just remember to make sure that the TOTAL number of authors
 % is the number that will appear on the first page PLUS the
 % number that will appear in the \additionalauthors section.
@@ -166,18 +169,57 @@ XXX\\
 
 % \keywords{ACM proceedings, \LaTeX, text tagging}
 
-\section{What are Bots and their History} 
-	[Peggy]
+\section{The Emergence of Bots} 
 
-	(shift from ``human'' imposter to being recognized as ``scripts'' or ``agents'' that are conversational in style)  
+% outline: the idea of turing test...
+From the earliest days of computer programs, developers have imagined the emergence of programs that can act, talk and think like humans.
+Such programs would not only automate tasks that humans might do, but they could also work with humans to solve intellectual tasks that cannot be entirely automated. 
+The hope, even as far back as 1966, was for these programs to pass the Turing Test (proposed in the 1950 paper Computing Machinery and Intelligence [s]), where humans could be fooled into believing that they are interacting with an intelligent human rather than a mere program (reference Eliza Bot [x]). 
 
-\section{Why are they so popular now}
+% outline: what is a bot, not about turing these days
+The term ``bot'' was used to describe the realization of this vision quite early on, but today the term is used to describe a conversational style user interface or an anthropomorphized script or agent that can automate rote and tedious tasks.  Such bots today may fetch or share information, extract and analyze data, detect and monitor events and activities in communication and social media, connect users with each other or with other tools, or they may provide feedback and recommendations on individual and collaborative tasks. 
+Bots are not (typically) intended to fool the end user into believing a bot is a real person, but many bots do have a personality that is engaging and pleasant to interact with. 
+
+% outline: term chatbot and where they reside
+The term ``chatbot'' is commonly used to emphasize the conversational style user interface of many bots, especially those that use natural language processing rather than simple commands.  Bots typically reside on popular platforms where users work or play with other users, and frequently integrate other services and micro-services into these channels, providing a conduit between users and other software services.  
+
+% outline: its time is now ... messaging platforms and also NLP
+% I was inspired by this article for the following paragraphs, could reference it in here somewhere.. 
+Bots are rapidly becoming a \emph{defacto} interface for interacting with services in just the past few years.  In part, this is because of the widespread adoption of messaging platforms (e.g., Facebook for social networking and Slack by developers) and in part because of the advancement of natural language processing, which many bots (but not all) leverage.
+
+% outline: bring in AI and data
+Another driver is the prevalence of ``big data'' and machine learning algorithms for analyzing data across many domains.  Bots provide a convenient way for developers to generate a user interface for interacting with these algorithms and data. 
+
+% outline: intuitive progression
+Developers use bots as well as create them. For developers, the transition from command line interfaces to interacting with bots through the messaging interface feels intuitive and has the advantage of bringing transparency of invoking and customizing services in a communication channel, while non-technical users are also embracing the notion of bots as opposed to installing and relying on apps that are not well integrated with their messaging environment.  
+
+% what other companies are doing
+All of the major companies clearly recognize the value that bots bring in terms of integration of services, users and communication channels. Facebook aims to ``replace apps'' one bot at a time in their messaging platform [x], while Microsoft claims that ``conversation as a platform'' is the operating system of the future rather than Windows [x]. 
+Amazon's Alexa, Apple's Siri and Google's Now platform are also showing agreement with this rapid shift towards bots.
+Software developers will also recognize many bots in the platforms they frequently use to connect with other developers and services, such as Slack [x] and HipChat [x]. 
+
+% outline and main point in the rest of the column
+In this column, we first discuss how bots can be used to automate many end user tasks and to fill numerous roles across a wide variety of user domains.  
+We provide some background for developers on how they can create bots and how they can host these bots on various platforms. These platforms support one or more frameworks that developers can leverage to support the rapid creation and design of bots. We also discuss some design guidelines for bots, pulling ideas from the emerging area of human-robot interaction. 
+In a sidebar, we look at how developers themselves use bots in their development work.  We call out this domain because to quote XXX from StackOverflow, ``developers are writing the script for tomorrow'' and thus we see examples of sophisticated and innovative bots emerging that pave the way for how bots may be created for other domains.
+Finally, we conclude this column with some considerations and advice for developers wishing to develop or use bots within their own development projects.   
+
+
+ 
 	
-	(timing of platforms and chat environments)
+
 	
-	Is this really new?  
+% \section{Why are they so popular now}
+% By renaming the above section we don't need this one.
+	
+%	(timing of platforms and chat environments)
+%	
+%	Is this really new?  
 
 \section{Botology: Types / Roles of bots}
+
+[Peggy]
+
 	Not just development roles, more general roles (e.g., transactional, informational, productivity, collaboration...)
 	
 	Give general examples as well as some specific SE examples throughout 
@@ -213,6 +255,9 @@ XXX\\
 
 
 \section{Takeaways}
+
+[Peggy]
+
 	Bots are everywhere: pay attention to how bots are used around you, in cars, in the home but also watch how other developers use Bots in their development activities (reference FSE visions paper)
 	
 	Bot ethics:  Reference Asimov's rules for Robots here..   Should this be updated for Bots?
@@ -222,6 +267,8 @@ XXX\\
 
 
 \section{Sidebar}
+
+[Peggy]
 
 Software bot usage in software development.
 
