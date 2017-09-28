@@ -285,20 +285,17 @@ Finally, bots may be characterized according to their \textbf{purpose}, as we su
 
 	Unlike traditional Turing bots, developers should make it clear to the user that they are not speaking with another human. This helps avoid the \emph{icky} feeling of distrust when the user inevitably figures out they are actually chatting with a bot.
 
-	Pretending isn't simply restricted to bots attempting to disguise themselves as humans. Some bots allow for human intervention when a user has a question or task that the bot is unable to provide an appropriate response to.  This switch must be handled correctly, as can lead to the same distrust if users believe they are speaking to a bot and instead realize it's a human.
+	Pretending isn't simply restricted to bots attempting to disguise themselves as humans. Some bots allow for human intervention when a user has a question or task that the bot is unable to provide an appropriate response to.  This switch must be handled gracefully and transparently, as it can lead to similar user distrust if they suddenly realize they're not chatting with a bot anymore.
 
 	Another issue arises when bots try to be everything to everyone at once; it's better to do one thing well than many things poorly. Since the bot paradigm is still relatively novel, many users are willing to overlook some shortcomings.  To minimize disappointment and user frustration, \textit{Facebook's bot best practices}[x] recommends clearly defining expectations with the bot's users. This includes how often the bot will be responding, what core functionality it supports, and when it is unable to complete a request.  When a bot does not understand, it should reiterate it's capabilities or direct users to it's help functionality.
 
 
 	\subsubsection{Control the conversational flow}
 
-	``a key part of chatbot design is keeping the user's flow smooth and frictionless.''\footnote{https://chatbottutorial.com/messenger-bot-builder/}
+	A user's interaction with a bot should be smooth and frictionless. They should be guided through their interactions, through carefully planned out conversational flows. Avoiding using stand alone questions or dead end statements, and instead provide hints into the bots functionality with syntax hints and UI elements (buttons, menus, lists) where appropriate. Tools like BotMock\footnote{https://botmock.com/} can be used prototype the user's ``journey through your bot''.
 
-	Help guide the user through their interactions with the bot by avoiding stand alone questions and dead end statements. Help the users understand how to interact with the bot providing a mixed of text based and structured  mechanisms where appropriate.  Clever use of buttons, quick-replies, menus, and other selection elements reduce the number of ``clicks'' required per task.  A bot is more likely to be successful if it solves the user's ``problem better/easier/faster than any of the alternative experiences''\footnote{https://docs.microsoft.com/en-us/bot-framework/bot-design-principles}.
-
-	\cl{Talk about the interaction mechanism options a bit more... also update the other sections to use consistent terminology}
-
-	Implementing global input checks for common navigation keywords (e.g. help, back, cancel, start over, exit), can help avoid the creation of ``stubborn'' or ``clueless'' bots\footnote{https://docs.microsoft.com/en-us/bot-framework/bot-design-principles}. Keywords or commands can also be used to provide accelerators for speeding up for expert or ``mission driven'' user's navigation. 
+	A bot is more likely to be successful if it solves a user's ``problem better/easier/faster than any of the alternative experiences''\footnote{https://docs.microsoft.com/en-us/bot-framework/bot-design-principles}.  Clever use of rich UI elements, such as buttons and quick-replies, greatly reduce the number of clicks required per task.  Commands provide accelerators for speeding up an expert or mission driven user's navigation.
+	Implementing global input checks for common navigational keywords (help, back, cancel, start over, exit) can help avoid the creation of ``stubborn'' or ``clueless'' bots\footnote{https://docs.microsoft.com/en-us/bot-framework/bot-design-principles}. 
 
 	\subsubsection{Tone builds personality}
 
