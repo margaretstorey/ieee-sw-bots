@@ -88,9 +88,6 @@
 \title{A New Generation of Software Bots:  \\
 How Developers can Create and Use Them}
 
-
-
-
 %Format\titlenote{(Produces the permission block, and
 %copyright information). For use with
 %SIG-ALTERNATE.CLS. Supported by ACM.}}
@@ -198,56 +195,66 @@ But another driver is the prevalence of ``big data'' along with machine learning
 Developers use bots as well as create them. For developers, the transition from command line interfaces to interacting with bots through the messaging interface feels intuitive and has the advantage of bringing transparency of invoking and customizing services in a communication channel, while non-technical users are also embracing the notion of bots as opposed to installing and relying on apps that are not well integrated with their messaging environment.  
 
 % what other companies are doing
-\cl{Major software companies are clearly recognizing...}
-All of the major software software companies clearly recognize the value that bots bring in terms of integration of services, users and communication channels. Facebook aims to ``replace apps'' one bot at a time in their messaging platform [x], while Microsoft claims that ``conversation as a platform'' is the operating system of the future rather than Windows [x]. 
-Amazon's Alexa, Apple's Siri and Google's Now \cl{soon to be replaced by Google Assistant} platform are also showing agreement with this rapid shift towards bots. \cl{IBM Watson?}
+Major software companies are clearly recognizing
+ the value that bots bring in terms of integration of services, users and communication channels. Facebook aims to ``replace apps'' one bot at a time in their messaging platform [x], while Microsoft claims that ``conversation as a platform'' is the operating system of the future rather than Windows [x]. 
+Amazon's Alexa, Apple's Siri, IBM Watson and Google's Now\footnote{soon to be replaced by Google Assistant} platform are also showing agreement with this rapid shift towards bots. 
 Software developers will also recognize many bots in the platforms they frequently use to connect with other developers and services, such as Slack [x], Teams [x] and HipChat [x]. 
 
 % outline and main point in the rest of the column
-In this column, we first describe the key characteristics of bots and how they can be used to automate many end user tasks across a wide variety of user domains.  
-We next provide background for developers on how they can create and host bots on various platforms. These platforms support one or more software frameworks that developers can leverage to support the rapid creation and design of bots. We also discuss some design guidelines for bots, pulling ideas from the emerging area of human-robot interaction. 
-In a sidebar, we look at how developers themselves use bots in their development work.  We call out this domain because to quote XXX from StackOverflow, ``developers are writing the script for tomorrow'' and thus we see examples of sophisticated and innovative bots emerging from developer needs that pave the way for how bots may be created for other domains.
-Finally, we conclude this column with some considerations and advice for developers wishing to develop bots for their end users or wishing to use bots within their own development projects.   
+%In this column, we first describe the key characteristics of bots and how they can be used to automate many end user tasks across a wide variety of user domains.  
+%We next provide background for developers on how they can create and host bots on various platforms. These platforms support one or more software frameworks that developers can leverage to support the rapid creation and design of bots. We also discuss some design guidelines for bots, pulling ideas from the emerging area of human-robot interaction. 
+%In a sidebar, we look at how developers themselves use bots in their development work.  We call out this domain because to quote XXX from StackOverflow, ``developers are writing the script for tomorrow'' and thus we see examples of sophisticated and innovative bots emerging from developer needs that pave the way for how bots may be created for other domains.
+%Finally, we conclude this column with some considerations and advice for developers wishing to develop bots for their end users or wishing to use bots within their own development projects.   
 
-  
+% new attempt at segueway for rest of paper that is less academic sounding: (english needs some work)
+To create and design bots for end users, developers can draw inspiration from existing bots, especially bots that are used in software development (as we discuss in the sidebar). 
+However, developers need to consider where to host bots, how to create them, but also when not to use bots. 
 
-\section{Botology: Understanding the landscape of bots}
-\cl{Bot-ology?}
+\section{Bot-ology: Understanding the landscape of bots}
 % [Peggy]
-
-\todo{improve and add more examples}
 
 
 It has been surprising to see the rapid development and widespread adoption of bots in just a few years, but what is more surprising is the vast array of bots that support so many diverse tasks and roles.  
 Rather than attempting to narrowly define bots or chatbots, instead we look at how they may be characterized. 
 
 One way to characterize bots is through the \textbf{interaction model} they provide. 
-Some bots support a domain specific language where the user interacts with the bot using specific commands within a command line interface.  For example, the Felix bot\footnote{\url{http://felixbot.co/}} (which integrates in Slack) boosts personal productivity and a user interacts with Felix using commands such as ``start'' and ``done'' to tell Felix about the status of their personal tasks. \cl{Maybe this is a good place to introduce the other interaction models: embedded rich UI controls (buttons, menus, images, cards, lists, templates, etc.) to allow users to respond quickly to the bots, and speech.}
-Other bots rely tend to rely on natural language processing, such as Apple's Siri. \cl{Siri understands natural language + speech, }
+Some bots support a domain specific language where the user interacts with the bot using specific commands within a command line interface, while others may parse natural language entered through text or speech.  
+Some bots may embed rich user interface controls in the platform to allow users to quickly respond to the bots.
+% For example, the Felix bot\footnote{\url{http://felixbot.co/}} (which integrates in Slack) boosts personal productivity and a user interacts with Felix using commands such as ``start'' and ``done'' to tell Felix about the status of their personal tasks. \cl{Maybe this is a good place to introduce the other interaction models: embedded rich UI controls (buttons, menus, images, cards, lists, templates, etc.) to allow users to respond quickly to the bots, and speech.}
+%Other bots rely tend to rely on natural language processing as well as speech, such as Apple's Siri. 
 
-Bots also differ in terms of whether they support a pull based approach, where the user initiates the interaction (e.g., a user invokes the bot using commands using ``Hey Siri''), or the bot may initiate the interaction based on some system or user context (e.g., the Poncho weather bot\footnote{\url{https://poncho.is/}} which can be used across several platforms including Facebook Messenger, Viber, Android and iPhone, will warn the user when it is about to rain). 
+Bots also differ in terms of whether they support a pull based approach, where the user initiates the interaction (e.g., a user invokes the bot using commands using ``Hey Siri''), or the bot may initiate the interaction based on some system or user context. 
+%(e.g., the Poncho weather bot\footnote{\url{https://poncho.is/}} which can be used across several platforms including Facebook Messenger, Viber, Android and iPhone, will warn the user when it is about to rain). 
 % does Poncho do that? I think it does...
 
-Another way to characterize bots is in terms of their \textbf{intelligence} which we further can characterize as follows:
-\todo{Carly to expand on these bullets}
+Another way to characterize bots is in terms of their \textbf{intelligence} which we characterize as follows:
 \begin{itemize}
-\item \emph{Adaptation:} How ``context aware'' the bot is and how the bot uses that context to change how it interacts with the user(s).  For example, ....
-\item \emph{Reasoning:} Some bots follow very simple logic rules (e.g., IFTTT) whereas others bots use more advanced Artificial Intelligence (AI).  \cl{For example, Butter.ai\footnote{https://butter.ai/} connects and searches across multiple apps (e.g. Slack, Google Drive, Gmail, Dropbox, Evernote, Trello) to help users find the team document they are looking for without leaving Slack.}
-\item \emph{Autonomy:}  Some bots may be entirely autonomous whereas other bots rely on a human user's input.  For example, ....
+\item \emph{Adaptation:} How ``context aware'' the bot is and how the bot uses that context to change how it interacts with the user(s).  
+% For example, ....
+\item \emph{Reasoning:} Some bots follow very simple logic rules 
+% (e.g., IFTTT) 
+whereas others bots use more advanced Artificial Intelligence (AI) to drive how they automate tasks for the user.  
+% \cl{For example, Butter.ai\footnote{https://butter.ai/} connects and searches across multiple apps (e.g. Slack, Google Drive, Gmail, Dropbox, Evernote, Trello) to help users find the team document they are looking for without leaving Slack.}
+\item \emph{Autonomy:}  Some bots may be entirely autonomous whereas other bots rely on a human user's input to take any actions, while others may use a mixed approach.  
+% For example, ....
 \end{itemize}
-
 
 
 Finally, bots may be characterized according to their \textbf{purpose}, as we summarize here: 
-\cl{maybe we could also distinguish between generalist bots (like Siri or M) vs specialist bots (like the ones below)?}
 \begin{itemize}
-\item \emph{transactional} bots work on behalf of the users, providing support for transactions with external systems.  \cl{Hipmunk bot (https://www.hipmunk.com/tailwind/hello-hipmunk-bot-for-skype/), Food Network Bot for recipes (https://www.messenger.com/t/FoodNetwork)}
-\item \emph{informational} bots exist to provide critical information to its users.  For example, the SwingTradeBot\footnote{\url{https://swingtradebot.com/}} helps its users stay on top of the stock market, by watching stocks and scanning the market for important developments and then alerting its users when they may need to take an action on their portfolio. \cl{Firebot, keeps it's users in the loop when they aren't able to watch the team's communication channels.  Firebot will notify users when channels are getting busy and can provide on-demand summaries of what they missed.}
-\item \emph{productivity} bots aim to improve a user's or team's productivity by automating rote or tedious tasks such as updating a calendar automatically when you email the bot (see \url{x.ai}), or more sophisticated bots such as Tomatobot\footnote{\url{https://tomatobot.matthewhiggins.me/}} that integrates in Slack that help you follow the Pomodoro Method\footnote{\url{https://blog.trello.com/how-to-pomodoro-your-way-to-productivity}} for boosting one's productivity. \cl{tomatobot also silences other notifications}
-\item \emph{collaboration} bots support how users communicate, coordinate or collaborate their tasks.  For example, the Meekan bot\footnote{\url{https://meekan.com/}} helps users coordinate and arrange their schedules to facilitate meetings.  Meekan integrates across a number of different platforms including Slack, Hipchat and Microsoft Teams.
-% I have too many software development examples? 
+\item \emph{generalist} bots, such as Siri or M, support a wide selection of services; 
+\item \emph{transactional} bots work on behalf of the users, executing transactions automatically with external systems (e.g., automatically making a purchase when a price level is reached).  
+% \cl{Hipmunk bot (https://www.hipmunk.com/tailwind/hello-hipmunk-bot-for-skype/), Food Network Bot for recipes (https://www.messenger.com/t/FoodNetwork)}
+\item \emph{informational} bots fetch information for its users (e.g., gathering insights about stocks or providing updates about the weather).  
+% For example, the SwingTradeBot\footnote{\url{https://swingtradebot.com/}} helps its users stay on top of the stock market, by watching stocks and scanning the market for important developments and then alerting its users when they may need to take an action on their portfolio. \cl{Firebot, keeps it's users in the loop when they aren't able to watch the team's communication channels.  Firebot will notify users when channels are getting busy and can provide on-demand summaries of what they missed.}
+\item \emph{productivity} bots improve a user's or team's productivity by automating rote or tedious tasks such as updating calendars automatically or silencing notifications. 
+ %  when you email the bot (see \url{x.ai}), or more sophisticated bots such as Tomatobot\footnote{\url{https://tomatobot.matthewhiggins.me/}} that integrates in Slack that help you follow the Pomodoro Method\footnote{\url{https://blog.trello.com/how-to-pomodoro-your-way-to-productivity}} for boosting one's productivity. \cl{tomatobot also silences other notifications}
+\item \emph{collaboration} bots support how users communicate, coordinate or collaborate their tasks (e.g., connecting the right people at the right time).
+% For example, the Meekan bot\footnote{\url{https://meekan.com/}} helps users coordinate and arrange their schedules to facilitate meetings.  Meekan integrates across a number of different platforms including Slack, Hipchat and Microsoft Teams. 
 \end{itemize}
-	
+
+In the sidebar, we provide examples of how bots are used by developers to support their work. 
+We call out this domain in the sidebar because to quote Joel Splosky from StackOverflow, ``developers are writing the script for tomorrow'' and thus we see examples of sophisticated and innovative bots emerging from developer needs that pave the way for how bots may be created for other domains.
 	
 \section{How to create Bots and where to host them}
 
