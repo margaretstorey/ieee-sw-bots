@@ -277,20 +277,22 @@ Finally, bots may be characterized according to their \textbf{purpose}, as we su
 
 	\subsection{Design guidelines}
 
-	Many of the platforms the support the distribution and creation of bots also provide developers with basic principles or best practices for bot design (Microsoft\footnote{https://docs.microsoft.com/en-us/bot-framework/}, Facebook\footnote{https://developers.facebook.com/docs/messenger-platform/design-resources}, Slack\footnote{https://api.slack.com/best-practices/}).
+	Many of the platforms not only support the creation and distribution of bots, but also provide developers with basic principles or best practices for bot design (Microsoft\footnote{https://docs.microsoft.com/en-us/bot-framework/}, Facebook\footnote{https://developers.facebook.com/docs/messenger-platform/design-resources}, Slack\footnote{https://api.slack.com/best-practices/}).
 
 	We highlight three important design considerations for bots.
 
 	\subsubsection{Don't pretend}
 
-	Bots should make it clear to the user that they are not speaking with another human.  Make it clear from the start of the conversation, via the name of the bot or by simply informing the user.  This avoids the ``icky'' feeling when the user inevitably figures out they are not speaking to a human.
+	Unlike traditional Turing bots, developers should make it clear to the user that they are not speaking with another human. This helps avoid the \emph{icky} feeling of distrust when the user inevitably figures out they are actually chatting with a bot.
 
-	Facebook's bot best practices recommends clearly defining expectations with the users.  This includes how often the bot will be responding, what core functionality it supports, and when it is unable to complete a request.  When a bot does not understand, it should reiterate it's capabilities or direct users to it's help functionality.
+	Pretending isn't simply restricted to bots attempting to disguise themselves as humans. Some bots allow for human intervention when a user has a question or task that the bot is unable to provide an appropriate response to.  This switch must be handled correctly, as can lead to the same distrust if users believe they are speaking to a bot and instead realize it's a human.
+
+	Another issue arises when bots try to be everything to everyone at once; it's better to do one thing well than many things poorly. Since the bot paradigm is still relatively novel, many users are willing to overlook some shortcomings.  To minimize disappointment and user frustration, \textit{Facebook's bot best practices}[x] recommends clearly defining expectations with the bot's users. This includes how often the bot will be responding, what core functionality it supports, and when it is unable to complete a request.  When a bot does not understand, it should reiterate it's capabilities or direct users to it's help functionality.
 
 
 	\subsubsection{Control the conversational flow}
 
-	``a key part of chatbot design is keeping the user’s flow smooth and frictionless.''\footnote{https://chatbottutorial.com/messenger-bot-builder/}
+	``a key part of chatbot design is keeping the user's flow smooth and frictionless.''\footnote{https://chatbottutorial.com/messenger-bot-builder/}
 
 	Help guide the user through their interactions with the bot by avoiding stand alone questions and dead end statements. Help the users understand how to interact with the bot providing a mixed of text based and structured  mechanisms where appropriate.  Clever use of buttons, quick-replies, menus, and other selection elements reduce the number of ``clicks'' required per task.  A bot is more likely to be successful if it solves the user's ``problem better/easier/faster than any of the alternative experiences''\footnote{https://docs.microsoft.com/en-us/bot-framework/bot-design-principles}.
 
@@ -300,9 +302,9 @@ Finally, bots may be characterized according to their \textbf{purpose}, as we su
 
 	\subsubsection{Tone builds personality}
 
-	The language a bot uses helps define and build its personality.  Conversations with bots are generally considered to be more casual than other company-user communication channels (e.g. websites, emails). But don't go too heavy on the personality, according to Slack, ``A little goes a long way. We cannot say this enough.''\footnote{https://api.slack.com/best-practices/}
+	The language a bot uses helps define and build its personality.  Conversations with bots are generally considered to be more casual than other company-user communication channels (e.g. websites, emails). But don't go too heavy on the personality, according to Slack, ``A little goes a long way. We cannot say this enough.''\footnote{https://api.slack.com/best-practices/}. A bot's personality should accentuate their company's brand or fit seamlessly into their team's culture.
 
-	Facebook's guidelines recommend using the active voice, in first or second person\footnote{https://developers.facebook.com/docs/messenger-platform/introduction/design-best-practices}.  Punctuation also plays a large role in the way the bot is perceived, so it can be leveraged to convey emotion but not at the expense of good grammar.  Proper spelling, capitalization, and sentence structure ensure that the meaning behind the message is not lost.  
+	Facebook's guidelines recommend using the active voice, in first or second person\footnote{https://developers.facebook.com/docs/messenger-platform/introduction/design-best-practices}.  Punctuation also plays a large role in the way the bot is perceived, so it can be leveraged to convey emotion but not at the expense of good grammar.  Proper spelling, capitalization, and sentence structure ensure that the meaning behind the message is not lost.
 
 \section{Takeaways}
 
