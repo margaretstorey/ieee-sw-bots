@@ -271,7 +271,7 @@ We call out this domain in the sidebar because to quote Joel Splosky from StackO
 
 	Distribution platforms also offer the benefit of defining and standardizing how users can interaction with bots.  Many platforms come with built in support for commands, natural language, speech, and even rich UI controls.  The method of interacting with the bots, strongly influences the users experience of using the bot.
 
-	Many distribution platforms also offer ways for users to discover and try out new bots. Similar to Apple's App-Store [x], many distribution platforms offer virtual ``bot stores'' where users browse for bots. Third-party sites (e.g. BotList) also offer online catalogs of bots for many popular distribution platforms. These ``bot stores'' and catalogs are an easy way for bot developers to promote and market their bots. Mature distribution channels often also offer means for the bots to safely collect payments from users, which can be particularly usefully when developing transactional style bots.
+	Many distribution platforms also offer ways for users to discover and try out new bots. Similar to Apple's App-Store [x], many distribution platforms offer virtual ``bot stores'' where users browse for bots. Third-party sites (e.g. BotList, Chatbottle) also offer online catalogs of bots for many popular distribution platforms. These ``bot stores'' and catalogs are an easy way for bot developers to promote and market their bots. Mature distribution channels often also offer means for the bots to safely collect payments from users, which can be particularly usefully when developing transactional style bots.
 
 	A summary of popular distribution platforms and technologies is included in figure X.  It should be noted that this is not a comprehensive list of all possible platforms, but rather a sample of popular technologies.
 
@@ -290,8 +290,7 @@ We call out this domain in the sidebar because to quote Joel Splosky from StackO
 
 	\subsubsection{Don't pretend}
 
-	Unlike traditional Turing bots, developers should make it clear to the user that they are not speaking with another human. This helps avoid the \emph{icky} feeling of distrust when the user inevitably figures out they are actually chatting with a bot.
-
+	Unlike traditional Turing bots, developers should make it clear to the user that they are not speaking with another human. This helps avoid the \emph{icky} feeling of distrust when the user inevitably figures out they are actually chatting with a bot.  
 	Pretending isn't simply restricted to bots attempting to disguise themselves as humans. Some bots allow for human intervention when a user has a question or task that the bot is unable to provide an appropriate response to.  This switch must be handled gracefully and transparently, as it can lead to similar user distrust if they suddenly realize they're not chatting with a bot anymore.
 
 	Another issue arises when bots try to be everything to everyone at once; it's better to do one thing well than many things poorly. Since the bot paradigm is still relatively novel, many users are willing to overlook some shortcomings.  To minimize disappointment and user frustration, \textit{Facebook's bot best practices}[x] recommends clearly defining expectations with the bot's users. This includes how often the bot will be responding, what core functionality it supports, and when it is unable to complete a request.  When a bot does not understand, it should reiterate it's capabilities or direct users to it's help functionality.
@@ -306,10 +305,12 @@ We call out this domain in the sidebar because to quote Joel Splosky from StackO
 
 	\subsubsection{Tone builds personality}
 
-	The language a bot uses helps define and build its personality.  Conversations with bots are generally considered to be more casual than other company-user communication channels (e.g. websites, emails). But don't go too heavy on the personality, according to Slack, ``A little goes a long way. We cannot say this enough.''\footnote{https://api.slack.com/best-practices/}. A bot's personality should accentuate their company's brand or fit seamlessly into their team's culture.
+	A bot's choice of language helps define and build its personality.  Talking to a robot can be boring. Even the bot effectively accomplish the user's tasks, they wont come back if they don't enjoy using it. User interactions with bots, like conversations in general, are more casual than many other company-user communication channels (e.g. websites, emails).  Bot's should aim to use friendly, accessible language and repeat inputs back to the user to they know it's listening. But developers should also feel free to have a bit of fun with users trying to test the bot (e.g. entering random inputs or repeating the same question). 
 
-	Facebook's guidelines recommend using the active voice, in first or second person\footnote{https://developers.facebook.com/docs/messenger-platform/introduction/design-best-practices}.  Punctuation also plays a large role in the way the bot is perceived, so it can be leveraged to convey emotion but not at the expense of good grammar.  Proper spelling, capitalization, and sentence structure ensure that the meaning behind the message is not lost.
+	But don't go too heavy on the personality. According to Slack\footnote{https://api.slack.com/best-practices/}: ``A little goes a long way. We cannot say this enough.'' A bot's personality should accentuate their company's brand or fit seamlessly into their team's culture.  
 
+	Facebook recommends all bots follow few simple conversational guidelines\footnote{https://developers.facebook.com/docs/messenger-platform/introduction/design-best-practices}. Bots should use they active voice, in first or second person as appropriate.  Punctuation also plays a large role in the way the bot is perceived, so it can be leveraged to convey emotion but not at the expense of good grammar.  Lastly, proper spelling, capitalization, and sentence structure ensure that the meaning behind the message is not lost.
+ 
 \section{Takeaways}
 
 	[Peggy]
