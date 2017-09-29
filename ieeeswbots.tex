@@ -174,30 +174,30 @@ XXX\\
 % [Peggy]
 
 % outline: the idea of turing test...
-From the earliest days of computer programs, developers have imagined the emergence of programs that can act, talk and think like humans.
-Such programs would not only automate tasks that humans might do, but they could also work with humans to solve intellectual tasks that cannot be entirely automated. 
-The hope, even as far back as 1966, was for these programs to pass the Turing Test (proposed in the 1950 paper Computing Machinery and Intelligence \cite{Turing-1950}), where humans could be fooled into believing that they are interacting with an intelligent human rather than a mere program (reference Eliza Bot \cite{Weizenbaum:1966:ECP:365153.365168}). 
+From the earliest days of computer programs, people have dreamed about programs that act, talk, and think like humans.
+Such programs could not only automate tasks that humans perform, but they could also work with humans to solve intellectual tasks that cannot be entirely automated. 
+Even as far back as 1966, the hope was for these programs to pass the Turing Test (proposed in the 1950 paper Computing Machinery and Intelligence \cite{Turing-1950}), where humans are fooled into believing they are interacting with an intelligent human rather than a mere program (reference Eliza Bot \cite{Weizenbaum:1966:ECP:365153.365168}). 
 
 % outline: what is a chatbot or bot, and not about turing these days
-The terms ``chatbot'', ``chatterbot'' and ``bot'' were interchangeably used to describe the realization of this vision quite early on, but today they are mostly used to refer to a conversational style user interface, an anthropomorphized script, or an agent that can automate rote and tedious tasks.
-Bots are not (typically) intended to fool the end user into believing a bot is a real person, but many bots do have a personality that is engaging and pleasant to interact with. 
+The terms ``chatbot'', ``chatterbot'', and ``bot'' were interchangeably used to describe the realization of this vision quite early on, but now they are mostly used to refer to a conversational-style user interface, an anthropomorphized script, or an agent that automates rote and tedious tasks.
+Bots are not typically intended to fool end users into believing they are interacting with a real person, but many bots do have a pleasant and engaging personality. 
  
 % outline:  where they reside and briefly what they do
-Bots typically reside on popular platforms where users work or play with other users, and frequently integrate other services and micro-services into these channels, providing a conduit between users and other software services. 
+Bots typically reside on popular platforms where users work or play with other users, and they frequently integrate other services into these channels, providing a conduit between users and other tools. 
 They may fetch or share information, extract and analyze data, detect and monitor events and activities in communication and social media, connect users with each other or with other tools, or they may provide feedback and recommendations on individual and collaborative tasks. 
 
 % outline: its time is now ... messaging platforms and also NLP
-Bots are rapidly becoming a \emph{de facto} interface for interacting with software services.  In part, this is because of the widespread adoption of messaging platforms (e.g., Facebook\footnote{https://www.facebook.com/\label{Facebook}} for social networking and Slack\footref{Slack} for developer communication) and in part because of the advancement of natural language processing, which many bots (but not all) leverage.
+Bots are rapidly becoming a \emph{de facto} interface for interacting with software services. This is partly due to the widespread adoption of messaging platforms (e.g., Facebook\footnote{https://www.facebook.com/\label{Facebook}} for social networking and Slack\footref{Slack} for developer communication), and partly because of the advancement of natural language processing, which many bots leverage.
 % outline: bring in AI and data
 But another driver is the prevalence of ``big data'' along with machine learning algorithms for analyzing data across many domains.  Bots provide a convenient way for developers to generate a user interface for interacting with these algorithms and data. 
 
 % outline: intuitive progression
-Developers use bots as well as create them. For developers, the transition from command line interfaces to interacting with bots through the messaging interface feels intuitive and has the advantage of bringing transparency of invoking and customizing services in a communication channel, while non-technical users are also embracing the notion of bots as opposed to installing and relying on apps that are not well integrated with their messaging environment.  
+Developers use bots as well as create them. For developers, the transition from command line interfaces to interacting with bots through the messaging interface feels intuitive and has the advantage of bringing transparency of invoking and customizing services in a communication channel, while non-technical users are also embracing the notion of bots as opposed to installing and relying on apps that are not well integrated with their messaging environment. \cp{I'm not sure about this paragraph. Doesn't flow well in its current location and form, and I don't totally get the connection btwn the listed thoughts/concepts.} 
 
 % what other companies are doing
-Major software companies are clearly recognizing the value that bots bring in terms of integration of services, users and communication channels. Facebook aims to ``replace apps'' one bot at a time in their messaging platform\footnote{http://www.telegraph.co.uk/technology/facebook/11996896/Can-Facebook-Messenger-kill-off-apps.html}, while Microsoft claims that ``conversation as a platform'' is the operating system of the future rather than Windows\footnote{https://channel9.msdn.com/Events/Build/2016/C902}. 
-Amazon's Alexa\footnote{https://developer.amazon.com/alexa\label{Alexa}}, Apple's Siri\footnote{https://www.apple.com/ca/ios/siri/\label{Siri}}, IBM Watson, and Google's Now\footnote{soon to be replaced by Google Assistant} platform are also showing agreement with this rapid shift towards bots. 
-Software developers will also recognize many bots in the platforms they frequently use to connect with other developers and services, such as Slack\footnote{https://slack.com/\label{Slack}}, Teams\footnote{https://teams.microsoft.com/\label{Teams}}, and HipChat\footnote{https://www.hipchat.com/\label{Hipchat}}. 
+Major software companies have started recognizing the value that bots bring in terms of integrating services, users, and communication channels. Facebook aims to ``replace apps'' one bot at a time in their messaging platform\footnote{http://www.telegraph.co.uk/technology/facebook/11996896/Can-Facebook-Messenger-kill-off-apps.html}, while Microsoft claims that ``conversation as a platform'' is the operating system of the future\footnote{https://channel9.msdn.com/Events/Build/2016/C902}. 
+Alexa\footnote{https://developer.amazon.com/alexa\label{Alexa}}, Siri\footnote{https://www.apple.com/ca/ios/siri/\label{Siri}}, IBM Watson, and Google Now\footnote{soon to be replaced by Google Assistant} are all platforms that support this rapid shift towards bots. 
+There are also many bots in the platforms software developers frequently use to connect with other developers and services, such as Slack\footnote{https://slack.com/\label{Slack}}, Microsoft Teams\footnote{https://teams.microsoft.com/\label{Teams}}, and HipChat\footnote{https://www.hipchat.com/\label{Hipchat}}. 
 
 % outline and main point in the rest of the column
 %In this column, we first describe the key characteristics of bots and how they can be used to automate many end user tasks across a wide variety of user domains.  
@@ -207,7 +207,7 @@ Software developers will also recognize many bots in the platforms they frequent
 
 % new attempt at segueway for rest of paper that is less academic sounding: (english needs some work)
 To create and design bots for end users, developers can draw inspiration from existing bots, especially bots that are used in software development (as we discuss in the sidebar). 
-However, developers need to consider where to host bots, how to create them, but also when not to use bots. 
+However, developers need to consider where to host bots, how to create them, but also when not to use bots. \cp{I think there's a big hole between the previous paragraphs and this one...it doesn't flow.}
 
 \section{Bot-ology: Understanding the Bot Landscape}
 % [Peggy]
