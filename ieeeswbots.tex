@@ -283,6 +283,16 @@ We call out this domain because of a quote from Joel Splosky of StackOverflow\fo
 	Mature distribution channels also have monetization features\footref{How_to_spot_the_winners}, with a mechanism for the bots to safely collect payments from users, which can be particularly usefully when developing transactional style bots.
 
 	A summary of popular distribution platforms and their associated technologies is included in Figure 1.  This is not a comprehensive list of all possible platforms, but rather a sample of popular technologies that developers can leverage.
+	
+	\begin{figure*}[t]
+    \begin{center}
+%        \includegraphics[width=\textwidth]{figure.pdf}
+		\caption{Our Table.}
+		\label{fig:table}
+	  \vspace{-12pt}
+    \end{center}
+    \vspace{-12pt}
+\end{figure*}
 
 	\subsection{Creation Platforms}
 
@@ -370,14 +380,14 @@ We see bots fulfilling a number of specific development tasks. For example, bots
 automatically committing code after testing (Jenkins CI\footnote{https://plugins.jenkins.io/}); 
 automatically creating bugs when a test fails (BugBot\footnote{https://smallwins.today/bugbot}); 
 automatically merging pull requests after a code review (Travis\footnote{https://docs.travis-ci.com/user/notifications/}); 
-automatically opening issues when a code quality concern is detected (Freud\cl{I can't find this one});
-automatically testing for user interface changes when a code change is submitted (CompareBot\cl{I can't find this one}); 
+automatically opening issues when a code quality concern is detected (Freud\footnote{https://www.slideshare.net/svenpeters/rise-of-the-machines-automate-your-development-54456075/56-Freud_Botfor_Pull_Requests\label{Atlassian}});
+automatically testing for user interface changes when a code change is submitted (CompareBot\footref{Atlassian}); 
 helping teams manage complex complex builds and supporting deployment from within the chat environment (as Hubot\footnote{https://hubot.github.com/} does); 
 centralizing service and performance monitoring (PagerDuty\footnote{https://www.pagerduty.com/integrations/}); 
 and interacting with end users (at scale) to answer frequently asked questions and to analyze user feedback (ZenDesk's AnswerBot\footnote{https://www.zendesk.com/answer-bot/}).
 %\end{itemize}
 
-Bots are also making their way into the developer's development environment \cl{I wonder IDEs a common enough term to use?}. For example, SlackOverflow\footref{StackOverflow} is a new bot that integrates StackOverflow into Visual Studio.  This bot leverages Microsoft's AI platform to help find the best information from StackOverflow to meet a developer's needs based on their development context. 
+Bots are also making their way into the developer's IDE. For example, SlackOverflow\footref{StackOverflow} is a new bot that integrates StackOverflow into Visual Studio.  This bot leverages Microsoft's AI platform to help find the best information from StackOverflow to meet a developer's needs based on their development context. 
 Developers can expect to see more and more bots being introduced into the tools and platforms they use for development related activities.  \cl{we have seen similar integrations (code reviews, github, etc) in IDEs, its interesting that they are now taking a ``bot'' or ``chat'' style roll}
 
 % \noindent
