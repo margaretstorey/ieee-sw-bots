@@ -288,64 +288,66 @@ We call out this domain because of a quote from Joel Splosky of StackOverflow\fo
 
 	A summary of popular creation platforms and their associated technologies is also included in Figure 1.
 
-	\section{Design guidelines}
+%	\section{Bots for Thought} or...
+ \section{Thoughts on Bots}
+	
+% [Peggy]
 
-	Many of the platforms not only support the creation and distribution of bots, but also provide developers with basic principles or best practices for bot design (Microsoft\footnote{https://docs.microsoft.com/en-us/bot-framework/}, Facebook\footnote{https://developers.facebook.com/docs/messenger-platform/design-resources}, Slack\footnote{https://api.slack.com/best-practices/}).
-
-	We highlight three important design considerations for bots.
-
-	\subsubsection{Don't pretend}
-
-	Unlike traditional Turing bots, developers should make it clear to the user that they are not speaking with another human. This helps avoid the \emph{icky} feeling of distrust when the user inevitably figures out they are actually chatting with a bot.  
-	Pretending isn't simply restricted to bots attempting to disguise themselves as humans. Some bots allow for human intervention when a user has a question or task that the bot is unable to provide an appropriate response to.  This switch must be handled gracefully and transparently, as it can lead to similar user distrust if they suddenly realize they're not chatting with a bot anymore.
-
-	Another issue arises when bots try to be everything to everyone at once; it's better to do one thing well than many things poorly. Since the bot paradigm is still relatively novel, many users are willing to overlook some shortcomings.  To minimize disappointment and user frustration, Facebook's bot best practices recommends clearly defining expectations with the bot's users. This includes how often the bot will be responding, what core functionality it supports, and when it is unable to complete a request.  When a bot does not understand, it should reiterate it's capabilities or direct users to it's help functionality.
-
-
-	\subsubsection{Control the conversational flow}
-
-	A user's interaction with a bot should be smooth and frictionless. They should be guided through their interactions, through carefully planned out conversational flows. Avoiding using stand alone questions or dead end statements, and instead provide hints into the bots functionality with syntax hints and UI elements (buttons, menus, lists) where appropriate. Tools like BotMock\footnote{https://botmock.com/} can be used prototype the user's ``journey through your bot''.
-
-	A bot is more likely to be successful if it solves a user's ``problem better/easier/faster than any of the alternative experiences''\footnote{https://docs.microsoft.com/en-us/bot-framework/bot-design-principles}.  Clever use of rich UI elements, such as buttons and quick-replies, greatly reduce the number of clicks required per task.  Commands provide accelerators for speeding up an expert or mission driven user's navigation.
-	Implementing global input checks for common navigational keywords (help, back, cancel, start over, exit) can help avoid the creation of ``stubborn'' or ``clueless'' bots\footnote{https://docs.microsoft.com/en-us/bot-framework/bot-design-principles}. 
-
-	\subsubsection{Tone builds personality}
-
-	A bot's choice of language helps define and build its personality.  Talking to a robot can be boring. Even the bot effectively accomplish the user's tasks, they wont come back if they don't enjoy using it. User interactions with bots, like conversations in general, are more casual than many other company-user communication channels (e.g. websites, emails).  Bot's should aim to use friendly, accessible language and repeat inputs back to the user to they know it's listening. But developers should also feel free to have a bit of fun with users trying to test the bot (e.g. entering random inputs or repeating the same question). 
-
-	But don't go too heavy on the personality. According to Slack\footnote{https://api.slack.com/best-practices/}: ``A little goes a long way. We cannot say this enough.'' A bot's personality should accentuate their company's brand or fit seamlessly into their team's culture.  
-
-	Facebook recommends all bots follow few simple conversational guidelines\footnote{https://developers.facebook.com/docs/messenger-platform/introduction/design-best-practices}. Bots should use they active voice, in first or second person as appropriate.  Punctuation also plays a large role in the way the bot is perceived, so it can be leveraged to convey emotion but not at the expense of good grammar.  Lastly, proper spelling, capitalization, and sentence structure ensure that the meaning behind the message is not lost.
- 
-\section{Takeaways}
-
-	[Peggy]
-	These days, bots are becoming pervasive.  End users experience them in cars, in the home, in entertainment devices and at work.  We see them particularly playing a significant and sophisticated role in many software development projects (as we discussed in the side bar).  
-	We suggest that developers learn from these experiences and watch for innovative ways to deploy them in their own projects (to improve their own activities but also as a feature for their end users), but at the same time, not to overuse them! 
-	We suggest that careful attention should be paid to the challenges they may introduce including information overload and interruptions.  
+	These days, bots are rapidly becoming pervasive.  End users experience them in cars, in the home, in entertainment devices and at work, and as we discussed in the sidebar they play a significant and sophisticated role in many software development projects.  
+	We need to learn from these early adoption experiences so that we find out what works well, but also what may go wrong when they are used.  We conclude this column with some advice we have gleaned about how best to use bots (or not).   
+	But we encourage developers to form their own opinions as they observe how bots are used. 
 	
 	
-	[Carly]
+	\subsection{To bot or not: amplify don't replace collaboration}
+		Bots are frequently used in group or collaborative settings and 
+		today it has become easy to automate many of the tasks that would normally require human interaction. But removing collaboration opportunities can have detrimental effects on creativity and productivity. 
+		Rather than replacing collaboration, bots may be used to reduce friction in communication or task coordination. For example, bots may provide transparency  on task progress, make team goals more visible, link experts in a team with novices, as well as build team trust and cooperation [reference Carly CSCW paper].
+		However, bot overuse or poor design may lead to information overload and to too many interruptions---something bot designers need to be aware of and to watch out for.  
 
-	We can't hide behind our bots, in the growing age of human-machine interactions.  With the ease of automating our everyday tasks, it is easy to begin to automating away many of the tasks that would normally require human interaction. Removing collaboration can have detrimental effects on creativity and productivity. Developers can use ``automation to amplify social communication and cognition''.
+	\subsection{Bot or human? The user should always know what to expect}
 
-	Instead of automating collaborative processes, developers should instead focus designing bots to reduce friction or blockers that can occur when collaborating. Bots can help connect developers with experts. They can remind developers of and help them adhere to team procedures and agreements. They can provide visibility into the progress begin made and provide updates on team goals. They can also aid in coordinating team activities. They can even promote team trust and cooperation. Developers should choose Bots, not to remove collaboration, but use them to enhance collaboration. (reference CSCW workshop paper)
-
-	\cl{We can use the bots in group settings rather than one-on-one.}
-
-	[Carly]
-	Another challenge they may introduce includes privacy intrusion. 
-
-	Robots shall not harm humans. Robots will obey orders. Robots will protect themselves.  Asimov's rules for Robots \cite{asimov1950evitable} seem simple enough, but with the growing number of bots that we interact with daily increases so does the likelihood of making mistakes. How should we update these rules be updated to reflect the growing ethical demands of human-bot interactions?
-
-	Just like humans, bots need to earn our trust... and we can only trust the bots as much as we trust those who are making the bots. 
-
-	As developers, we are constantly looking for ways to scratch our own itch.  This gives developers the unique opportunity to pave the way to adoption, and set the precedence for the future of bot-human interactions. 
+	Unlike traditional Turing bots proposed back in the 1950s, bot developers should make it clear to the user that they are not speaking with another human but they are interacting with a bot. 
+	Similarly, if a bot passes control to a human (when for example the bot cannot understand a command or answer a question), the user should be aware of this and the handover should be handled gracefully and transparently so the user doesn't lose trust with the system supported by the bots and the user understands why control is being passed to a human. 
+	It is also important that the purpose of the bot (what it can and can't do) should be evident and should match the user's expectations. 
+	%Another issue arises when bots try to be everything to everyone at once; it's better to do one thing well than many things poorly. Since the bot paradigm is still relatively novel, many users are willing to overlook some shortcomings.  To minimize disappointment and user frustration, Facebook's bot best practices recommends clearly defining expectations with the bot's users. This includes how often the bot will be responding, what core functionality it supports, and when it is unable to complete a request.  When a bot does not understand, it should reiterate it's capabilities or direct users to it's help functionality.
 
 
-	\cl{I cant get the wording right on this bit...  This given the unique opportunity to... ability to test out... it is our responsibility to... us ourselves as guinea pigs for... pave the way for ... set the precedence for the future of bot-human interactions.}
+	\subsection{Bot talk: How to talk to and be heard by bots}
+	% Control the conversational flow}
+
+	Ideally, a user's interaction with a bot should be smooth and frictionless. 
+	This can be achieved if the designer carefully plans potential conversational flows, especially for bots that are conversationally based.  For example, bots need to repeat the users' commands so the user knows they are listening and they need to be able to detect dead ends in a conversation and prompt the user by giving hints on how to continue the interaction. Some bots may incorporate UI elements (as mentioned above) to reduce the number of user clicks required and to make the conversation more efficient. 
+	Implementing global input checks for common navigational keywords (help, back, cancel, start over, exit) can help avoid the creation of ``stubborn'' or ``clueless'' bots\footnote{https://docs.microsoft.com/en-us/bot-framework/bot-design-principles}.
+	While tools like BotMock\footnote{https://botmock.com/} can be used prototype the user's ``journey through your bot''. 
+%
+%They should be guided through their interactions, through carefully planned out conversational flows. Avoiding using stand alone questions or dead end statements, and instead provide hints into the bots functionality with syntax hints and UI elements (buttons, menus, lists) where appropriate. 
+%	A bot is more likely to be successful if it solves a user's ``problem better/easier/faster than any of the alternative experiences''\footnote{https://docs.microsoft.com/en-us/bot-framework/bot-design-principles}.  Clever use of rich UI elements, such as buttons and quick-replies, greatly reduce the number of clicks required per task.  Commands provide accelerators for speeding up an expert or mission driven user's navigation.
+%
+	Finally, many platforms have specific guidelines one can follow, e.g., Facebook recommends their bots follow a set of simple conversational guidelines\footnote{https://developers.facebook.com/docs/messenger-platform/introduction/design-best-practices}. 
+	%Bots should use they active voice, in first or second person as appropriate.  Punctuation also plays a large role in the way the bot is perceived, so it can be leveraged to convey emotion but not at the expense of good grammar.  Lastly, proper spelling, capitalization, and sentence structure ensure that the meaning behind the message is not lost.
 
 
+	\subsection{Bot personality matters more than looks} 
+	As bots are predominantly textual based, how a bot uses language and even how it is named, influences the users' perception of its personality.  This may seem surprising given that users should know they are interacting with a mere program, but early research has shown that personality changes how users interact with them. 
+	% A bot's choice of language helps define and build its personality.  
+	Even if a bot can effectively accomplish a user's tasks, they won't adopt the bot if they find the bot boring. The choice of language should be casual, accessible,  friendly and fun.  Bots should expect users to test their abilities and respond accordingly.
+	%like conversations in general, are more casual than many other company-user communication channels (e.g. websites, emails).  Bot's should aim to use friendly, accessible language and repeat inputs back to the user to they know it's listening. But developers should also feel free to have a bit of fun with users trying to test the bot (e.g. entering random inputs or repeating the same question). 
+	But too much personality may not be a good thing.  According to Slack\footnote{https://api.slack.com/best-practices/}: ``A little goes a long way.''  Done right, bots can accentuate a company's brand and enhance culture.
+	% We cannot say this enough.'' 
+	% A bot's personality should accentuate their company's brand or fit seamlessly into their team's culture.  
+
+\subsection{Bots should do no harm}
+
+% 	Another challenge they may introduce includes privacy intrusion. 
+
+Bots, like robots, should do no harm to users.  
+Asimov's laws for robots~\cite{asimov1950evitable}, which include: 
+	robots shall not harm humans; robots will obey orders; and robots will protect themselves; perhaps also apply to software bots.
+	But perhaps these rules are too simple with the complexity and rapid growth of bots in our software ecosystems.  Simple mistakes could have devastating effects, and a user's privacy may be hard to protect.  
+	We can expect to see a code of ethics in the near future for human-bot interaction, but in the meantime, developers should carefully consider how the bots may be misused either intentionally or unintentionally. Of course, many bots are already seen as malicious, and thus building trust with users may also pose a challenge. 
+	 In the meantime, many of the platforms that support the creation and distribution of bots also provide developers with basic principles or best practices for bot design (Microsoft\footnote{https://docs.microsoft.com/en-us/bot-framework/}, Facebook\footnote{https://developers.facebook.com/docs/messenger-platform/design-resources}, Slack\footnote{https://api.slack.com/best-practices/}).
+	 But developers wishing to use or create bots for their end users need to be careful with the bots they bring to life. 
+	
 
 \section*{Sidebar}
 
