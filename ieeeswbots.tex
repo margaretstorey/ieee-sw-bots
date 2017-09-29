@@ -226,15 +226,15 @@ Bots also differ in terms of whether they support a pull based approach, where t
 %(e.g., the Poncho weather bot\footnote{\url{https://poncho.is/}} which can be used across several platforms including Facebook Messenger, Viber, Android and iPhone, will warn the user when it is about to rain). 
 % does Poncho do that? I think it does...
 
-Another way to characterize bots is in terms of their \textbf{intelligence} which we characterize as follows:
+Another way to characterize bots is in terms of their \textbf{intelligence} which we further distinguish as follows:
 \begin{itemize}
-\item \emph{Adaptation:} How ``context aware'' the bot is and how the bot uses that context to change how it interacts with the user(s). 
+\item \emph{Adaptation:} How ``context aware'' the bot is and how the bot may use that context to change how it interacts with the user(s). 
 % For example, ....
-\item \emph{Reasoning:} Some bots follow very simple logic rules
+\item \emph{Reasoning:} Some bots follow very simple logic rules,
 % (e.g., IFTTT) 
-whereas others bots use more advanced Artificial Intelligence (AI) to drive how they automate tasks for the user.  
+whereas other bots use more advanced Artificial Intelligence (AI) to drive how they automate tasks for the user.  
 % \cl{For example, Butter.ai\footnote{https://butter.ai/} connects and searches across multiple apps (e.g. Slack, Google Drive, Gmail, Dropbox, Evernote, Trello) to help users find the team document they are looking for without leaving Slack.}
-\item \emph{Autonomy:}  Some bots may be entirely autonomous whereas other bots rely on a human user's input to take any actions, while others may use a mixed approach.  
+\item \emph{Autonomy:}  Some bots may be entirely autonomous, whereas other bots rely on a human user's input to take any actions, while others may use a mixed approach.  
 % For example, ....
 \end{itemize}
 
@@ -246,42 +246,49 @@ Finally, bots may be characterized according to their \textbf{purpose}, as we su
 % \cl{Hipmunk bot (https://www.hipmunk.com/tailwind/hello-hipmunk-bot-for-skype/), Food Network Bot for recipes (https://www.messenger.com/t/FoodNetwork)}
 \item \emph{informational} bots fetch information for its users (e.g., gathering insights about stocks or providing updates about the weather).  
 % For example, the SwingTradeBot\footnote{\url{https://swingtradebot.com/}} helps its users stay on top of the stock market, by watching stocks and scanning the market for important developments and then alerting its users when they may need to take an action on their portfolio. \cl{Firebot, keeps it's users in the loop when they aren't able to watch the team's communication channels.  Firebot will notify users when channels are getting busy and can provide on-demand summaries of what they missed.}
-\item \emph{productivity} bots improve a user's or team's productivity by automating rote or tedious tasks such as updating calendars automatically or silencing notifications. 
+\item \emph{productivity} bots improve a user's or team's productivity by automating rote or tedious tasks such as updating calendars automatically or silencing notifications; 
  %  when you email the bot (see \url{x.ai}), or more sophisticated bots such as Tomatobot\footnote{\url{https://tomatobot.matthewhiggins.me/}} that integrates in Slack that help you follow the Pomodoro Method\footnote{\url{https://blog.trello.com/how-to-pomodoro-your-way-to-productivity}} for boosting one's productivity. \cl{tomatobot also silences other notifications}
-\item \emph{collaboration} bots support how users communicate, coordinate or collaborate their tasks (e.g., connecting the right people at the right time).
+\item and \emph{collaboration} bots support how users communicate, coordinate or collaborate their tasks (e.g., by connecting the right people at the right time).
 % For example, the Meekan bot\footnote{\url{https://meekan.com/}} helps users coordinate and arrange their schedules to facilitate meetings.  Meekan integrates across a number of different platforms including Slack, Hipchat and Microsoft Teams. 
 \end{itemize}
 
 In the sidebar, we provide examples of how bots are used by developers to support their work. 
-We call out this domain because of a quote from Joel Splosky of StackOverflow\footnote{https://stackoverflow.com/\label{StackOverflow}}, ``developers are writing the script for tomorrow''. Everyday we see new examples of sophisticated and innovative bots, emerging from developer needs, that pave the way for how bots may be created in other domains.
+We call out this domain because of a quote from Joel Splosky of StackOverflow\footnote{https://stackoverflow.com/\label{StackOverflow}} where he claims ``developers are writing the script for tomorrow''. Everyday we see new examples of sophisticated and innovative bots to meet developer needs. These innovations pave the way for how bots may be used and created in other domains.
 	
 \section{How to create Bots and where to host them}
 
-	Although simple bots can be built from scratch and self-hosted, many developers choose to leverage third-party frameworks to streamline the process. With the explosion of new tools in the bot development domain, if is important to distinguish between the tools used to build bots (Creation Platforms) and the platforms where they dwell (Distribution Platforms).
-
-	Many large companies, such as Microsoft and Facebook\footref{Facebook} for example, offer a comprehensive set of tools to support both the creation and distribution of bots. Other companies, provide specialized solutions for specific aspects of bot creation and distribution. 
+	Although simple bots can be built from scratch and self-hosted, many developers choose to leverage third-party frameworks to streamline the creation and distribution process. With the explosion of new tools in the bot development domain, we need to distinguish between the tools used to build bots (Creation Platforms) and the platforms where the bots dwell (Distribution Platforms).
+%
+% why no footnote for Microsoft?
+	Large companies, such as Microsoft and Facebook\footref{Facebook}, offer a comprehensive set of tools to support both the creation and distribution of bots. Other companies, provide specialized solutions for specific aspects of bot creation and distribution. 
 
 	\subsection{Distribution Platforms}
-	The distribution platforms are the online ecosystems where the bots reside. They define where and how the bots are accessed by users. Although typically messaging platforms, bot distribution platforms range from general purpose social networks (e.g., Messenger, Skype, WeChat) to domain specific channels (e.g., Slack\footref{Slack}, Teams\footref{Teams}, and Hipchat\footref{Hipchat} aimed towards software developers).  These platforms can support human(s)-bot, bot-bot, or even system-bot interactions.  
+	Distribution platforms are online ecosystems where bots reside and function. These platforms dictate where and how the bots are accessed by end users. Many of these platforms are messaging or social networking platforms (e.g., Messenger, Skype, WeChat).  But other platforms are domain specific channels (e.g., Slack\footref{Slack}, Teams\footref{Teams}, and Hipchat\footref{Hipchat}) aimed towards software developers.  
+	% are there domain specific for other domains? 
+	These platforms support human(s)-bot, bot-bot, or even system-bot interactions.  
 
-	Selecting the right distribution platforms offer many benefits for developers: access to an existing user base\footnote{https://medium.com/mobile-lifestyle/messenger-vs-skype-vs-slack-vs-telegram-how-to-spot-the-winners-adc34b4ca066\label{How_to_spot_the_winners}}, defined interaction models, discovery\footref{How_to_spot_the_winners}, and monetization\footref{How_to_spot_the_winners}.  
+	Selecting the right distribution platform can lead to many benefits for developers.
+	Some provide access to an existing user base\footnote{https://medium.com/mobile-lifestyle/messenger-vs-skype-vs-slack-vs-telegram-how-to-spot-the-winners-adc34b4ca066\label{How_to_spot_the_winners}}.
+	Launching a bot on an existing platform gives developers a head start in overcoming the cold-start user problem that many new applications face. 
+	% Selecting the wrong user base can be equally detrimental. 
+	Developers should not only consider the size of the existing user base, but also the general user demographics as well as the costs for a user to access the platform.   
+	Many distribution platforms define and standardize how users can interact with bots.  Such platforms have built-in support for commands, natural language, speech, and even rich UI controls.  The method of interacting with the bots, strongly influences the users' experience with the created bots.
+	
+	Many distribution platforms offer discovery mechanisms\footref{How_to_spot_the_winners} with different ways for users to discover and try out new bots. Similar to Apple's App-Store\footnote{http://www.apple.com/ca/ios/app-store/}, some platforms offer virtual ``bot stores'' where users browse for bots. Third-party sites (e.g., BotList\footnote{https://botlist.co/}, Chatbottle\footnote{https://chatbottle.co/}) also provide online catalogs of bots for many popular distribution platforms. These ``bot stores'' and catalogs are an easy way for bot developers to promote and market their bots. 
+	Mature distribution channels also have monetization features\footref{How_to_spot_the_winners}, with a mechanism for the bots to safely collect payments from users, which can be particularly usefully when developing transactional style bots.
 
-	Launching a bot on an existing platform gives developers a head start in overcoming the cold-start user problem that many new applications face. Selecting the wrong user base, however, can be equally detrimental. Developers should not only consider the size of the existing user base, but also the general user demographics as well as the costs for a user to access the platform. 
-
-	Distribution platforms also offer the benefit of defining and standardizing how users can interaction with bots.  Many platforms come with built in support for commands, natural language, speech, and even rich UI controls.  The method of interacting with the bots, strongly influences the users experience of using the bot.
-
-	Many distribution platforms also offer ways for users to discover and try out new bots. Similar to Apple's App-Store\footnote{http://www.apple.com/ca/ios/app-store/}, many distribution platforms offer virtual ``bot stores'' where users browse for bots. Third-party sites (e.g., BotList\footnote{https://botlist.co/}, Chatbottle\footnote{https://chatbottle.co/}) also offer online catalogs of bots for many popular distribution platforms. These ``bot stores'' and catalogs are an easy way for bot developers to promote and market their bots. Mature distribution channels often also offer means for the bots to safely collect payments from users, which can be particularly usefully when developing transactional style bots.
-
-	A summary of popular distribution platforms and technologies is included in figure X.  It should be noted that this is not a comprehensive list of all possible platforms, but rather a sample of popular technologies.
+	A summary of popular distribution platforms and their associated technologies is included in Figure 1.  This is not a comprehensive list of all possible platforms, but rather a sample of popular technologies that developers can leverage.
 
 	\subsection{Creation Platforms}
 
-	The creation platforms support the design and development of bots. They provide a variety of software foundations (e.g. frameworks, tool kits, APIs) as well as other goodies such ass natural language processing, search, image processing, etc. These bot creation services can be platform specific or produce bots that can be deployed across multiple distribution platforms (e.g. Microsoft Bot Framework\footref{https://dev.botframework.com/}, BotKit\footnote{https://www.botkit.ai/}, PandoraBots\footnote{https://www.pandorabots.com/}). The services they provide range from documentation and code templates, to no-code-required bot building interfaces such as ChatFuel\footnote{https://chatfuel.com/}. 
-	Many of the popular bot creation platforms also offer vibrant developer ecosystems. Developers can plug into these online communities for developer expertise in the form of tutorials, articles, discussions, and support.  Other general bot development communities, such as the BotMaker's Slack group\footnote{https://botmakers.org/} and the Chatbot New Community\footnote{http://news.chatbotsmagazine.com/}, are a hotbed for discussions on a variety of bot-related topics.
+	The creation platforms support the design and development of bots. They provide a variety of software foundations, frameworks, toolkits, APIs, as well as other advanced features such as natural language processing, search, image processing, etc. These bot creation services may be platform specific or produce bots that can be deployed across multiple distribution platforms such as Microsoft Bot Framework\footref{https://dev.botframework.com/}, BotKit\footnote{https://www.botkit.ai/}, PandoraBots\footnote{https://www.pandorabots.com/}. 
+	
+	The services these creation platforms provide range from documentation and code templates, to no-code-required bot building interfaces such as ChatFuel\footnote{https://chatfuel.com/}. 
+	Many of the popular bot creation platforms also belong to vibrant developer ecosystems. Developers can plug into these online communities for developer expertise in the form of tutorials, articles, discussions, and support.  Other general bot development communities, such as the BotMaker's Slack group\footnote{https://botmakers.org/} and the Chatbot New Community\footnote{http://news.chatbotsmagazine.com/}, are a hotbed for discussions on a variety of bot-related topics.
 
-	A summary of popular creation platforms and technologies is included in figure X.
+	A summary of popular creation platforms and their associated technologies is also included in Figure 1.
 
-	\subsection{Design guidelines}
+	\section{Design guidelines}
 
 	Many of the platforms not only support the creation and distribution of bots, but also provide developers with basic principles or best practices for bot design (Microsoft\footnote{https://docs.microsoft.com/en-us/bot-framework/}, Facebook\footnote{https://developers.facebook.com/docs/messenger-platform/design-resources}, Slack\footnote{https://api.slack.com/best-practices/}).
 
@@ -340,7 +347,7 @@ We call out this domain because of a quote from Joel Splosky of StackOverflow\fo
 
 
 
-\section{Sidebar}
+\section*{Sidebar}
 
 % [Peggy]
 % why bots in SE
