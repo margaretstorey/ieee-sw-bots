@@ -207,89 +207,89 @@ There are also many bots in the platforms software developers frequently use to 
 
 % new attempt at segueway for rest of paper that is less academic sounding: (english needs some work)
 To create and design bots for end users, developers can draw inspiration from existing bots, especially bots that are used in software development (as we discuss in the sidebar). 
-However, developers need to consider where to host bots, how to create them, but also when not to use bots. \cp{I think there's a big hole between the previous paragraphs and this one...it doesn't flow.}
+However, developers need to consider where to host bots, how to create them, but also when not to use bots. \cp{I think there's a big hole between the previous paragraphs and this one...it doesn't flow. Why do we need to create and design bots for end users?}
 
-\section{Bot-ology: Understanding the Bot Landscape}
+\section{Botology: Understanding the Bot Landscape}
 % [Peggy]
 
 
-It has been surprising to see the rapid development and widespread adoption of bots in just a few years, but what is more surprising is the vast array of bots that support so many diverse tasks and roles.  
-Rather than attempting to narrowly define bots or chatbots, instead we look at ways of characterizing them. 
+We have witnessed the development and widespread adoption of bots in just a few years, but what is truly surprising is the vast array of bots that support so many diverse tasks and roles.  
+Rather than attempting to narrowly define bots or chatbots, instead we look at ways of characterizing them. \cp{I think this paragraph needs more meat. You go from a statement about how awesome it is that there are so many bots, to we are looking at characterizing bots.}
 
 One way to characterize bots is through the \textbf{interaction model} they provide. 
-Some bots support a domain specific language where the user interacts with the bot using specific commands within a command line interface, while others may parse natural language entered through text or speech.  
-Some bots may embed rich user interface controls in the platform to allow users to quickly respond to the bots.
+Some bots support a domain specific language where users interact with the bot using specific commands within a command line interface, while other bots may parse natural language through text or speech.  
+Some bots may embed rich user interface controls in a platform to allow users to quickly respond to the bot.
 % For example, the Felix bot\footnote{\url{http://felixbot.co/}} (which integrates in Slack) boosts personal productivity and a user interacts with Felix using commands such as ``start'' and ``done'' to tell Felix about the status of their personal tasks. \cl{Maybe this is a good place to introduce the other interaction models: embedded rich UI controls (buttons, menus, images, cards, lists, templates, etc.) to allow users to respond quickly to the bots, and speech.}
 %Other bots rely tend to rely on natural language processing as well as speech, such as Apple's Siri. 
 
-Bots also differ in terms of whether they support a pull based approach, where the user initiates the interaction (e.g., a user invokes the bot using commands using ``Hey Siri''), or the bot may initiate the interaction based on some system or user context. 
+Bots also differ in terms of whether they support a pull-based approach, where users initiate the interaction with the bot (e.g., a user invokes the bot using commands such as ``Hey Siri''), or the bot may initiate the interaction based on some system or user context. 
 %(e.g., the Poncho weather bot\footnote{\url{https://poncho.is/}} which can be used across several platforms including Facebook Messenger, Viber, Android and iPhone, will warn the user when it is about to rain). 
 % does Poncho do that? I think it does...
 
-Another way to characterize bots is in terms of their \textbf{intelligence} which we further distinguish as follows:
+Another way to characterize bots is in terms of their \textbf{intelligence}, which can be further distinguished as follows:
 \begin{itemize}
-\item \emph{Adaptation:} How ``context aware'' the bot is and how the bot may use that context to change how it interacts with the user(s). 
+\item \emph{Adaptation:} How ``context aware'' the bot is and how the bot may use that context to change how it interacts with users. 
 % For example, ....
-\item \emph{Reasoning:} Some bots follow very simple logic rules,
+\item \emph{Reasoning:} Some bots follow simple logic rules,
 % (e.g., IFTTT) 
-whereas other bots use more advanced Artificial Intelligence (AI) to drive how they automate tasks for the user.  
+whereas other bots use more advanced Artificial Intelligence (AI) to drive how they automate tasks for users.  
 % \cl{For example, Butter.ai\footnote{https://butter.ai/} connects and searches across multiple apps (e.g. Slack, Google Drive, Gmail, Dropbox, Evernote, Trello) to help users find the team document they are looking for without leaving Slack.}
-\item \emph{Autonomy:}  Some bots may be entirely autonomous, whereas other bots rely on a human user's input to take any actions, while others may use a mixed approach.  
+\item \emph{Autonomy:}  Some bots may be entirely autonomous, whereas other bots rely on human input before taking action, while others may use a mixed approach.  
 % For example, ....
 \end{itemize}
 
 
-Finally, bots may be characterized according to their \textbf{purpose}, as we summarize here: 
+Finally, bots can be characterized according to their \textbf{purpose}, as we summarize here: 
 \begin{itemize}
-\item \emph{generalist} bots, such as Siri\footref{Siri} or M\footnote{https://m.facebook.com/}, support a wide selection of services; 
-\item \emph{transactional} bots work on behalf of the users, executing transactions automatically with external systems (e.g., automatically making a purchase when a price level is reached).  
+\item \emph{Generalist} bots, such as Siri\footref{Siri} or M\footnote{https://m.facebook.com/}, support a wide range of services. \cp{I think this needs a few examples.}
+\item \emph{Transactional} bots work on the user's behalf, executing transactions automatically with external systems (e.g., automatically making a purchase when a price level is reached).  
 % \cl{Hipmunk bot (https://www.hipmunk.com/tailwind/hello-hipmunk-bot-for-skype/), Food Network Bot for recipes (https://www.messenger.com/t/FoodNetwork)}
-\item \emph{informational} bots fetch information for its users (e.g., gathering insights about stocks or providing updates about the weather).  
+\item \emph{Informational} bots fetch information for users (e.g., gathering insights about stocks or providing weather updates).  
 % For example, the SwingTradeBot\footnote{\url{https://swingtradebot.com/}} helps its users stay on top of the stock market, by watching stocks and scanning the market for important developments and then alerting its users when they may need to take an action on their portfolio. \cl{Firebot, keeps it's users in the loop when they aren't able to watch the team's communication channels.  Firebot will notify users when channels are getting busy and can provide on-demand summaries of what they missed.}
-\item \emph{productivity} bots improve a user's or team's productivity by automating rote or tedious tasks such as updating calendars automatically or silencing notifications; 
+\item \emph{Productivity} bots improve user or team productivity by automating rote or tedious tasks, such as updating calendars or silencing notifications.
  %  when you email the bot (see \url{x.ai}), or more sophisticated bots such as Tomatobot\footnote{\url{https://tomatobot.matthewhiggins.me/}} that integrates in Slack that help you follow the Pomodoro Method\footnote{\url{https://blog.trello.com/how-to-pomodoro-your-way-to-productivity}} for boosting one's productivity. \cl{tomatobot also silences other notifications}
-\item and \emph{collaboration} bots support how users communicate, coordinate or collaborate their tasks (e.g., by connecting the right people at the right time).
+\item \emph{Collaboration} bots help users communicate, coordinate, and collaborate (e.g., by connecting the right people at the right time).
 % For example, the Meekan bot\footnote{\url{https://meekan.com/}} helps users coordinate and arrange their schedules to facilitate meetings.  Meekan integrates across a number of different platforms including Slack, Hipchat and Microsoft Teams. 
 \end{itemize}
 
 In the sidebar, we provide examples of how bots are used by developers to support their work. 
-We call out this domain because of a quote from Joel Splosky of StackOverflow\footnote{https://stackoverflow.com/\label{StackOverflow}} where he claims ``developers are writing the script for tomorrow''. Everyday we see new examples of sophisticated and innovative bots to meet developer needs. These innovations pave the way for how bots may be used and created in other domains.
+We call out this domain because of a quote from Joel Splosky of Stack Overflow\footnote{https://stackoverflow.com/\label{StackOverflow}}, where he claims ``developers are writing the script for tomorrow''. Everyday we see new examples of sophisticated and innovative bots to meet developer needs. These innovations pave the way for how bots may be used and created in other domains.
 	
 \section{Creating and Hosting Bots}
 
 	\begin{figure*}[ht]
 	  \includegraphics[width=\textwidth,height=400pt]{PlatformComparisonTable.pdf}
-	  \caption{An overview of features for popular bot creation and distribution platforms.  The final entry in the table contains a collection of additional bot development technologies, sorted by category.}
+	  \caption{An overview of features for popular bot creation and distribution platforms. The final entry in the table contains a collection of additional bot development technologies, sorted by category.}
 	\end{figure*}
 
 	Although simple bots can be built from scratch and self-hosted, many developers choose to leverage third-party frameworks to streamline the creation and distribution process. With the explosion of new tools in the bot development domain, we need to distinguish between the tools used to build bots (Creation Platforms) and the platforms where the bots dwell (Distribution Platforms).
 %
 % why no footnote for Microsoft?
-	Large companies, such as Microsoft and Facebook\footref{Facebook}, offer a comprehensive set of tools to support both the creation and distribution of bots. Other companies, provide specialized solutions for specific aspects of bot creation and distribution. 
+	Large companies such as Microsoft and Facebook\footref{Facebook} offer a comprehensive set of tools to support both the creation and distribution of bots. Other companies provide specialized solutions for specific aspects of bot creation and distribution. \cp{Can you add examples to support the second point? Also, this paragraph doesn't give any information as to why the info is important.}
 
 	\subsection{Distribution Platforms}
-	Distribution platforms are online ecosystems where bots reside and function. These platforms dictate where and how the bots are accessed by end users. Many of these platforms are messaging or social networking platforms (e.g., Messenger, Skype, WeChat).  But other platforms are domain specific channels (e.g., Slack\footref{Slack}, Teams\footref{Teams}, and Hipchat\footref{Hipchat}) aimed towards software developers.  
+	Distribution platforms are online ecosystems where bots reside and function. These platforms dictate where and how the bots are accessed by end users, and many center around messaging or social networking (e.g., Messenger, Skype, WeChat).  But other platforms are domain specific channels (e.g., Slack\footref{Slack}, Teams\footref{Teams}, and Hipchat\footref{Hipchat}) aimed at software developers.  
 	% are there domain specific for other domains? 
-	These platforms support human(s)-bot, bot-bot, or even system-bot interactions.  
+	These platforms support human-bot, bot-bot, or even system-bot interactions.  
 
 	Selecting the right distribution platform can lead to many benefits for developers.
-	Some provide access to an existing user base\footnote{https://medium.com/mobile-lifestyle/messenger-vs-skype-vs-slack-vs-telegram-how-to-spot-the-winners-adc34b4ca066\label{How_to_spot_the_winners}}.
-	Launching a bot on an existing platform gives developers a head start in overcoming the cold-start user problem that many new applications face. 
+	Some provide access to an existing user base\footnote{https://medium.com/mobile-lifestyle/messenger-vs-skype-vs-slack-vs-telegram-how-to-spot-the-winners-adc34b4ca066\label{How_to_spot_the_winners}}---
+	launching a bot on an existing platform gives developers a head start in overcoming the cold-start user problems that many new applications face. 
 	% Selecting the wrong user base can be equally detrimental. 
 	Developers should not only consider the size of the existing user base, but also the general user demographics as well as the costs for a user to access the platform.   
-	Many distribution platforms define and standardize how users can interact with bots.  Such platforms have built-in support for commands, natural language, speech, and even rich UI controls.  The method of interacting with the bots, strongly influences the users' experience with the created bots.
+	Many distribution platforms define and standardize how users can interact with bots, and such platforms have built-in support for commands, natural language, speech, and even rich UI controls.  The method of interacting with a bot strongly influences the user's experience with that bot.
 	
-	Many distribution platforms offer discovery mechanisms\footref{How_to_spot_the_winners} with different ways for users to discover and try out new bots. Similar to Apple's App-Store\footnote{http://www.apple.com/ca/ios/app-store/}, some platforms offer virtual ``bot stores'' where users browse for bots. Third-party sites (e.g., BotList\footnote{https://botlist.co/}, Chatbottle\footnote{https://chatbottle.co/}) also provide online catalogs of bots for many popular distribution platforms. These ``bot stores'' and catalogs are an easy way for bot developers to promote and market their bots. 
-	Mature distribution channels also have monetization features\footref{How_to_spot_the_winners}, with a mechanism for the bots to safely collect payments from users, which can be particularly usefully when developing transactional style bots.
+	Many distribution platforms offer discovery mechanisms\footref{How_to_spot_the_winners} with different ways for users to discover and try out new bots. Similar to Apple's App-Store\footnote{http://www.apple.com/ca/ios/app-store/}, some platforms offer virtual ``bot stores'' where users browse for bots. Third-party sites (e.g., BotList\footnote{https://botlist.co/}, Chatbottle\footnote{https://chatbottle.co/}) also provide online catalogs of bots for many popular distribution platforms, which are an easy way for developers to promote and market their bots. 
+	Mature distribution channels also have monetization features\footref{How_to_spot_the_winners} with mechanisms that allow bots to safely collect payments from users, a particularly useful feature when developing transactional-style bots.
 
 	A summary of popular distribution platforms and their associated technologies is included in Figure 1.  This is not a comprehensive list of all possible platforms, but rather a sample of popular technologies that developers can leverage.
 
 	\subsection{Creation Platforms}
 
-	The creation platforms support the design and development of bots. They provide a variety of software foundations, frameworks, toolkits, APIs, as well as other advanced features such as natural language processing, search, image processing, etc. These bot creation services may be platform specific or produce bots that can be deployed across multiple distribution platforms such as Microsoft Bot Framework\footref{https://dev.botframework.com/}, BotKit\footnote{https://www.botkit.ai/}, PandoraBots\footnote{https://www.pandorabots.com/}. 
+	Creation platforms support the design and development of bots, and provide a variety of software foundations, frameworks, toolkits, APIs, and other advanced features (e.g., natural language processing, search, image processing). These bot creation services may be platform specific or produce bots that can be deployed across multiple distribution platforms, such as the Microsoft Bot Framework\footref{https://dev.botframework.com/}, BotKit\footnote{https://www.botkit.ai/}, and  PandoraBots\footnote{https://www.pandorabots.com/}. \cp{to me, creation platform doesn't equal creation service...are you using the proper terminology? Or perhaps the second sentence needs rephrasing...bots created on these platforms can be platform specific or can be...}
 	
 	The services these creation platforms provide range from documentation and code templates, to no-code-required bot building interfaces such as ChatFuel\footnote{https://chatfuel.com/}. 
-	Many of the popular bot creation platforms also belong to vibrant developer ecosystems. Developers can plug into these online communities for developer expertise in the form of tutorials, articles, discussions, and support.  Other general bot development communities, such as the BotMaker's Slack group\footnote{https://botmakers.org/} and the Chatbot New Community\footnote{http://news.chatbotsmagazine.com/}, are a hotbed for discussions on a variety of bot-related topics.
+	Many of the popular bot creation platforms also belong to vibrant developer ecosystems---developers can connect to these online communities to obtain developer expertise in the form of tutorials, articles, discussions, and support.  Other general bot development communities, such as the BotMaker's Slack group\footnote{https://botmakers.org/} and the Chatbot New Community\footnote{http://news.chatbotsmagazine.com/}, are a hotbed for discussions on a variety of bot-related topics.
 
 	A summary of popular creation platforms and their associated technologies is also included in Figure 1.
 
@@ -300,32 +300,32 @@ We call out this domain because of a quote from Joel Splosky of StackOverflow\fo
 	
 % [Peggy]
 
-	These days, bots are rapidly becoming pervasive.  End users experience them in cars, in the home, in entertainment devices and at work, and as we discussed in the sidebar they play a significant and sophisticated role in many software development projects.  
-	We need to learn from these early adoption experiences so that we find out what works well, but also what may go wrong when they are used.  We conclude this column with some advice we have gleaned about how best to use bots (or not).   
-	But we encourage developers to form their own opinions as they observe how bots are used. 
+	Bots are rapidly becoming pervasive: we interact with them in cars, in the home, in entertainment devices, and at work, and as we discussed in the sidebar, bots play a significant and sophisticated role in many software development projects.  
+	We need to learn from these early adoption experiences so that we find out what works well, but also what may go wrong when they are used.  We conclude this column with some advice we have gleaned about how to best use bots (or not).   
+	But we encourage developers to form their own opinions as they observe how bots are used. \cp{I think this intro paragraph needs more meat, and the last sentence should be cut or further explained to make it useful to the discussion.} 
 	
 	
 	\subsection{To Bot or Not: Amplification Doesn't Replace Collaboration}
-		Bots are frequently used in group or collaborative settings and 
-		today it has become easy to automate many of the tasks that would normally require human interaction. But removing collaboration opportunities can have detrimental effects on creativity and productivity. 
-		Rather than replacing collaboration, bots may be used to reduce friction in communication or task coordination. For example, bots may provide transparency  on task progress, make team goals more visible, link experts in a team with novices, as well as build team trust and cooperation \cite{lebeuf2017software}.
-		However, bot overuse or poor design may lead to information overload and to too many interruptions---something bot designers need to be aware of and to watch out for.  
+		Bots are frequently used in group or collaborative settings as 
+		it has become easy to automate many of the tasks that would normally require human interaction. But removing collaboration opportunities can have detrimental effects on creativity and productivity. 
+		Rather than replacing collaboration, bots can be used to reduce friction in communication or task coordination. For example, bots may provide transparency on task progress, make team goals more visible, link experts with novices, as well as build team trust and cooperation \cite{lebeuf2017software}.
+		However, the poor design or overuse of bots may lead to information and interruption overload---something bot designers need to be aware of and to watch out for.  
 
 	\subsection{Bot or Human? The User Should Always Know What to Expect}
 
-	Unlike traditional Turing bots proposed back in the 1950s, bot developers should make it clear to the user that they are not speaking with another human but they are interacting with a bot. 
-	Similarly, if a bot passes control to a human (when for example the bot cannot understand a command or answer a question), the user should be aware of this and the handover should be handled gracefully and transparently. This insures the user doesn't lose trust with the system supported by the bots and the user understands why control is being passed to a human. 
-	It is also important that the purpose of the bot (what it can and can't do) be evident and should match the user's expectations. 
+	Unlike the Turing bots proposed back in the 1950s, bot developers should make it clear to users that they are interacting with a bot rather than speaking with another human. 
+	Similarly, if a bot passes control to a human (e.g., when the bot cannot understand a command or answer a question), the user should be aware of this and the handover should be handled gracefully and transparently. This insures users do not lose trust with the system supported by the bots and that they understand why control is being passed to a human. 
+	It is also important that the purpose of the bot---what it can and can't do---be evident and match the user's expectations. 
 	%Another issue arises when bots try to be everything to everyone at once; it's better to do one thing well than many things poorly. Since the bot paradigm is still relatively novel, many users are willing to overlook some shortcomings.  To minimize disappointment and user frustration, Facebook's bot best practices recommends clearly defining expectations with the bot's users. This includes how often the bot will be responding, what core functionality it supports, and when it is unable to complete a request.  When a bot does not understand, it should reiterate it's capabilities or direct users to it's help functionality.
 
 
 	\subsection{Bot Talk: How to Talk to and Be Heard by Bots}
 	% Control the conversational flow}
 
-	Ideally, a user's interaction with a bot should be smooth and frictionless. 
-	This can be achieved if the designer carefully plans potential conversational flows, especially for bots that are conversationally based.  For example, bots need to repeat the users' commands so the user knows they are listening and they need to be able to detect dead ends in a conversation and prompt the user by giving hints on how to continue the interaction. Some bots may incorporate UI elements (as mentioned above) to reduce the number of user clicks required and to make the conversation more efficient. 
+	Ideally, users' interactions with bots should be smooth and frictionless. 
+	This can be achieved if designers carefully plan potential conversational flows, especially for conversational bots. For example, bots need to repeat a user's commands so the user knows the bot is listening, and bots need to be able to detect dead ends in a conversation and prompt the user by giving hints on how to continue the interaction. Some bots may incorporate UI elements (as mentioned above) to reduce the number of user clicks required and to make the conversation more efficient. 
 	Implementing global input checks for common navigational keywords (help, back, cancel, start over, exit) can help avoid the creation of ``stubborn'' or ``clueless'' bots\footnote{https://docs.microsoft.com/en-us/bot-framework/bot-design-principles}.
-	While tools like BotMock\footnote{https://botmock.com/} can be used prototype the user's ``journey through your bot''. 
+	While tools like BotMock\footnote{https://botmock.com/} can be used prototype the user's ``journey through your bot''. \cp{you say "as mentioned above"..I'm assuming this is in one of the figures? I didn't PDF this...}
 %
 %They should be guided through their interactions, through carefully planned out conversational flows. Avoiding using stand alone questions or dead end statements, and instead provide hints into the bots functionality with syntax hints and UI elements (buttons, menus, lists) where appropriate. 
 %	A bot is more likely to be successful if it solves a user's ``problem better/easier/faster than any of the alternative experiences''\footnote{https://docs.microsoft.com/en-us/bot-framework/bot-design-principles}.  Clever use of rich UI elements, such as buttons and quick-replies, greatly reduce the number of clicks required per task.  Commands provide accelerators for speeding up an expert or mission driven user's navigation.
@@ -335,11 +335,11 @@ We call out this domain because of a quote from Joel Splosky of StackOverflow\fo
 
 
 	\subsection{Personality Matters More Than Looks} 
-	As bots are predominantly textual based, how a bot uses language and even how it is named, influences the users' perception of its personality.  This may seem surprising given that users should know they are interacting with a mere program, but early research has shown that personality changes how users interact with them. 
+	As bots are predominantly text based, how a bot uses language---even how it is named---influences users' perception of its personality.  This may seem surprising given that users should know they are interacting with a mere program, but early research has shown that bot personality changes how users interact with them. 
 	% A bot's choice of language helps define and build its personality.  
-	Even if a bot can effectively accomplish a user's tasks, they won't adopt the bot if they find the bot boring. The choice of language should be casual, accessible, friendly, and fun.  Bots should expect users to test their abilities and respond accordingly.
+	Even if a bot can effectively accomplish a user's tasks, people won't adopt the bot if they find the bot boring. The choice of language should be casual, accessible, friendly, and fun.  Bots should expect users to test their abilities and respond accordingly.
 	%like conversations in general, are more casual than many other company-user communication channels (e.g. websites, emails).  Bot's should aim to use friendly, accessible language and repeat inputs back to the user to they know it's listening. But developers should also feel free to have a bit of fun with users trying to test the bot (e.g. entering random inputs or repeating the same question). 
-	But too much personality may not be a good thing.  According to Slack\footnote{https://api.slack.com/best-practices/}: ``A little goes a long way.''  Done right, bots can accentuate a company's brand and enhance culture.
+	But too much personality may not be a good thing.  According to Slack\footnote{https://api.slack.com/best-practices/}, ``a little goes a long way''.  Done right, bots can accentuate a company's brand and enhance culture.
 	% We cannot say this enough.'' 
 	% A bot's personality should accentuate their company's brand or fit seamlessly into their team's culture.  
 
@@ -348,38 +348,38 @@ We call out this domain because of a quote from Joel Splosky of StackOverflow\fo
 % 	Another challenge they may introduce includes privacy intrusion. 
 
 Bots, like robots, should do no harm to users.  
-Asimov's laws for robots~\cite{asimov1950evitable}, which include: 
-	robots shall not harm humans; robots will obey orders; and robots will protect themselves; perhaps also apply to software bots.
+Asimov's laws for robots~\cite{asimov1950evitable} state that 
+	robots shall not harm humans, robots will obey orders, and robots will protect themselves, which can also apply to software bots.
 	But perhaps these rules are too simple with the complexity and rapid growth of bots in our software ecosystems.  Simple mistakes could have devastating effects, and a user's privacy may be hard to protect.  
-	We can expect to see a code of ethics in the near future for human-bot interaction, but in the meantime, developers should carefully consider how the bots may be misused either intentionally or unintentionally. Of course, many bots are already seen as malicious, and thus building trust with users may also pose a challenge. 
-	 In the meantime, many of the platforms that support the creation and distribution of bots also provide developers with basic principles or best practices for bot design (Microsoft\footnote{https://docs.microsoft.com/en-us/bot-framework/}, Facebook\footnote{https://developers.facebook.com/docs/messenger-platform/design-resources}, Slack\footnote{https://api.slack.com/best-practices/}).
-	 But developers wishing to use or create bots for their end users need to be careful which bots they bring to life. 
+	We can expect to see a code of ethics for human-bot interactions in the near future, but in the meantime, developers should carefully consider how their bots may be misused, either intentionally or unintentionally. Many bots are already seen as malicious, thus building trust with users may also pose a challenge. 
+	 For now, many of the platforms that support the creation and distribution of bots also provide developers with basic principles or best practices for bot design (Microsoft\footnote{https://docs.microsoft.com/en-us/bot-framework/}, Facebook\footnote{https://developers.facebook.com/docs/messenger-platform/design-resources}, Slack\footnote{https://api.slack.com/best-practices/}).
+	 But developers wishing to use or create bots for their end users need to be careful which bots they bring to life.
 	
 
 \section*{Sidebar}
 
 % [Peggy]
 % why bots in SE
-Software developers are early adopters and proponents of bots as they recognize their potential to enhance developer and team productivity, as well as significantly improve software quality \cite{storey2016disrupting}. 
+Software developers are early adopters and proponents of bots as they recognize their potential to enhance individual and team productivity as well as significantly improve software quality \cite{storey2016disrupting}. 
 % why so much adoption in SE; and some not really bots
-The adoption of bots in software development has been eased by the fact that developers engage in communication and source code repository hubs, such as Slack\footref{Slack}, Microsoft Teams\footref{Teams}, Atlassian's Hipchat\footref{Hipchat} and GitHub\footnote{http://github.com}.  Slack, Team and Hipchat provide a number of integrations with other services, with many of these integrations being referred to as bots (although many of these integrations are more like a scripting language command line interface than a chatbot). \cl{this bit is a tad repetitive. Maybe we could mention the benefits like team visibility, ease of access for ``non-technical'' team members, etc?}
-Furthermore, developers feel very much at ease at using the bot frameworks that are available in these platforms to create bots to address friction points they experience in their own development projects. 
+The adoption of bots in software development has been eased along by the fact that developers engage in communication and source code repository hubs, such as Slack\footref{Slack}, Microsoft Teams\footref{Teams}, Atlassian's Hipchat\footref{Hipchat} and GitHub\footnote{http://github.com}. These tools provide a number of integrations with other services, with many of these integrations being referred to as bots (although some are more like a scripting language interface than a chatbot). \cl{this bit is a tad repetitive. Maybe we could mention the benefits like team visibility, ease of access for ``non-technical'' team members, etc?}
+Furthermore, developers feel very much at ease using the bot frameworks that are available in these platforms to create bots to address friction points they experience in their own development projects. \cp{they do? why/how?}
  
 We see bots fulfilling a number of specific development tasks. For example, bots provide support to developers by:
 %\begin{itemize}
 %\item 
 automatically committing code after testing (Jenkins CI\footnote{https://plugins.jenkins.io/}); 
-automatically creating bugs when a test fails (BugBot\footnote{https://smallwins.today/bugbot}); 
-automatically merging pull requests after a code review (Travis\footnote{https://docs.travis-ci.com/user/notifications/}); 
-automatically opening issues when a code quality concern is detected (Freud\footnote{https://www.slideshare.net/svenpeters/rise-of-the-machines-automate-your-development-54456075/56-Freud\_Botfor\_Pull\_Requests\label{Atlassian}});
-automatically testing for user interface changes when a code change is submitted (CompareBot\footref{Atlassian}); 
-helping teams manage complex complex builds and supporting deployment from within the chat environment (as Hubot\footnote{https://hubot.github.com/} does); 
+automatically creating bugs when tests fail (BugBot\footnote{https://smallwins.today/bugbot}); 
+automatically merging pull requests after code reviews (Travis\footnote{https://docs.travis-ci.com/user/notifications/}); 
+automatically opening issues when code quality concerns are detected (Freud\footnote{https://www.slideshare.net/svenpeters/rise-of-the-machines-automate-your-development-54456075/56-Freud\_Botfor\_Pull\_Requests\label{Atlassian}});
+automatically testing for user interface changes when code changes are submitted (CompareBot\footref{Atlassian}); 
+helping teams manage complex builds and supporting deployment from within the chat environment (as Hubot\footnote{https://hubot.github.com/} does); 
 centralizing service and performance monitoring (PagerDuty\footnote{https://www.pagerduty.com/integrations/}); and
-interacting with end users (at scale) to answer frequently asked questions and to analyze user feedback (ZenDesk's AnswerBot\footnote{https://www.zendesk.com/answer-bot/}).
+interacting with end users (at scale) to answer frequently asked questions and to analyze their feedback (ZenDesk's AnswerBot\footnote{https://www.zendesk.com/answer-bot/}).
 %\end{itemize}
 
-Bots are also making their way into the developer's IDE. For example, SlackOverflow\footref{StackOverflow} is a new bot that integrates StackOverflow into Visual Studio.  This bot leverages Microsoft's AI platform to help find the best information from StackOverflow to meet a developer's needs based on their development context. 
-Developers can expect to see more and more bots being introduced into the tools and platforms they use for development related activities.  \cl{we have seen similar integrations (code reviews, github, etc) in IDEs, its interesting that they are now taking a ``bot'' or ``chat'' style roll}
+Bots are also making their way into the developer's IDE. For example, Slack-Overflow\footref{StackOverflow} is a new bot that integrates Stack Overflow into Visual Studio.  This bot leverages Microsoft's AI platform to help find the best information from Stack Overflow to meet developer needs based on their development context. 
+Developers can expect to see more and more bots being introduced into the tools and platforms they use for development related activities.  \cl{we have seen similar integrations (code reviews, github, etc) in IDEs, its interesting that they are now taking a ``bot'' or ``chat'' style roll} \cp{I think this final paragraph needs more meat...it feels like the paper is missing a proper conclusion...some zinger that sticks in peoples' minds.}
 
 % \noindent
 % \subsection*{Reference} 
