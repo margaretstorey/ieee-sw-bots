@@ -367,27 +367,22 @@ We call out this domain because of a quote from Joel Splosky of Stack Overflow\f
 
 Software developers are early adopters and proponents of bots as they recognize their potential to enhance individual and team productivity as well as significantly improve software quality. For developers, the transition from command line interfaces to interacting with chatbots feels intuitive and has the advantage of bringing awareness and transparency within the communication channel, while non-technical team members gain the option to engage with the operations (e.g., using a bot to deploy).
 
-SendWithUs, a company that provides transactional email services, has adopted bots as part of their software development process. With 15 employs and two office locations (Victoria and San Fransisco), the company uses Slack as the central hub of their communication and Dev-Ops, and bots fulfill a number of specific development tasks. For example, bots provide support to SendWithUs developers by:
+SendWithUs, a company that provides transactional email services, has described to us how they've adopted bots as part of their software development process. With 15 employs and two office locations (Victoria and San Fransisco), the company uses Slack as the central hub of their communication and Dev-Ops, and bots fulfill a number of specific development tasks. For example, their bots provide support by:
 
 \begin{itemize} 
 \item Setting reminders to themselves or other team members [Slackbot]
 \item Managing and coordinating costumer support and helpdesk tickets [Help Scout](https://www.helpscout.net)
-\item Facilitating realtime communication with users visiting their website [Olark](https://www.olark.com/)
+\item Facilitating real-time communication with users visiting their website [Olark piped into Help Scout](https://www.olark.com/)
 \item Connecting and managing physical communication (e.g., SMS and Phone) to the company's communication hub---Slack [Twilio](https://www.twilio.com/)
-\item Accommodating custom tasks (e.g., ordering team lunch via a message on Slack) [Hubot]
+\item Accommodating custom tasks (e.g., ordering a team's lunch via a message on Slack) [Hubot](https://hubot.github.com/)
 \item Automatically sharing resources and documents within the team (e.g., screenshots) [Dropbox \& Google drive]
-\item Managing and tracking code migrations and deployments from within Slack, and raising team awareness when this happens (as this may cause errors during migration) [Heroku]
-\item Monitoring and indexing runtime warnings, errors, and exceptions [Paper trail]
-\item Notifying the appropriate team members on errors and exceptions [Sentry]
+\item Managing and tracking code migrations and deployments from within Slack, and raising team awareness when this happens (as this may cause errors during migration) [Custum bot with the Heroku integration]
+\item Monitoring and indexing runtime warnings, errors, and exceptions [Papertrail](https://papertrailapp.com/)
+\item Notifying the appropriate team members on errors and exceptions [Sentry](https://sentry.io/welcome/)
 \item Tracking and aggregating service-status of other service providers that the company depends on [statuspage.io]
-\item Stripe (for all payments)
-\item Twitter
-\item IFTTT \& Zappier
-\item Giphy
-\item Hangouts
 \end{itemize}
 
-Developers can expect to see more and more bots being introduced to support their workflow and development related activities. However, companies like SendWithUs also recognize possible risks of making the communication hub, in this Slack, irreplaceable.
+Developers can expect to see more and more bots being introduced to support their workflow and development related activities. However, companies like SendWithUs also recognize their dependability on Slack and the many tasks done by bots, that have become crucial to the running of the company.
 
 
 % [Peggy]
