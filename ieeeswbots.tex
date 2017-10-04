@@ -69,7 +69,7 @@
 % add comments to the paper.
 
 \newboolean{showcomments}
-\setboolean{showcomments}{false}
+\setboolean{showcomments}{true}
 
 \ifthenelse{\boolean{showcomments}}
   {
@@ -190,9 +190,8 @@ XXX\\
 
 % outline: the idea of turing test...
 From the earliest days of computer programs, people have dreamed about programs that act, talk, and think like humans.
-Such programs could not only automate tasks that humans perform, but they could also work with humans to solve intellectual tasks that cannot be entirely automated. 
-\az{I suggest to cut out the following sentence}
-Even as far back as 1966, the hope was for these programs to pass the Turing Test (proposed in the 1950 paper Computing Machinery and Intelligence \cite{Turing-1950}), where humans are fooled into believing they are interacting with an intelligent human rather than a mere program (reference Eliza Bot \cite{Weizenbaum:1966:ECP:365153.365168}). 
+Such programs could not only automate tasks that humans perform, but they could also work with humans to solve intellectual tasks that cannot be entirely automated.
+% Even as far back as 1966, the hope was for these programs to pass the Turing Test (proposed in the 1950 paper Computing Machinery and Intelligence \cite{Turing-1950}), where humans are fooled into believing they are interacting with an intelligent human rather than a mere program (reference Eliza Bot \cite{Weizenbaum:1966:ECP:365153.365168}). 
 
 % outline: what is a chatbot or bot, and not about turing these days
 The terms ``chatbot'', ``chatterbot'', and ``bot'' were interchangeably used to describe the realization of this vision quite early on, but nowadays they are mostly used to refer to a conversational-style user interface, an anthropomorphized script, or an agent that automates rote and tedious tasks.
@@ -211,12 +210,12 @@ But another driver is the prevalence of ``big data'' along with machine learning
 % Developers use bots as well as create them. For developers, the transition from command line interfaces to interacting with bots through the messaging interface feels intuitive and has the advantage of bringing transparency of invoking and customizing services in a communication channel, while non-technical users are also embracing the notion of bots as opposed to installing and relying on apps that are not well integrated with their messaging environment. \cp{I'm not sure about this paragraph. Doesn't flow well in its current location and form, and I don't totally get the connection btwn the listed thoughts/concepts.} 
 
 % what other companies are doing
-\az{I would cut out the following paragraph (up to line 204) - it doesn't add value}
-Major software companies have started recognizing the value that bots bring in terms of integrating services, users, and communication channels. Facebook aims to ``replace apps'' one bot at a time in their messaging platform\footnote{http://www.telegraph.co.uk/technology/facebook/11996896/Can-Facebook-Messenger-kill-off-apps.html}, while Microsoft claims that ``conversation as a platform'' is the operating system of the future\footnote{https://channel9.msdn.com/Events/Build/2016/C902}. 
-Alexa\footnote{https://developer.amazon.com/alexa\label{Alexa}}, Siri\footnote{https://www.apple.com/ca/ios/siri/\label{Siri}}, IBM Watson, and Google Now
-% \footnote{soon to be replaced by Google Assistant} 
-are all platforms that support this rapid shift towards bots. 
-There are also many bots in the platforms software developers frequently use to connect with other developers and services, such as Slack\footnote{https://slack.com/\label{Slack}}, Microsoft Teams\footnote{https://teams.microsoft.com/\label{Teams}}, and HipChat\footnote{https://www.hipchat.com/\label{Hipchat}}. 
+
+% Major software companies have started recognizing the value that bots bring in terms of integrating services, users, and communication channels. Facebook aims to ``replace apps'' one bot at a time in their messaging platform\footnote{http://www.telegraph.co.uk/technology/facebook/11996896/Can-Facebook-Messenger-kill-off-apps.html}, while Microsoft claims that ``conversation as a platform'' is the operating system of the future\footnote{https://channel9.msdn.com/Events/Build/2016/C902}. 
+% Alexa\footnote{https://developer.amazon.com/alexa\label{Alexa}}, Siri\footnote{https://www.apple.com/ca/ios/siri/\label{Siri}}, IBM Watson, and Google Now
+% % \footnote{soon to be replaced by Google Assistant} 
+% are all platforms that support this rapid shift towards bots. 
+% There are also many bots in the platforms software developers frequently use to connect with other developers and services, such as Slack\footnote{https://slack.com/\label{Slack}}, Microsoft Teams\footnote{https://teams.microsoft.com/\label{Teams}}, and HipChat\footnote{https://www.hipchat.com/\label{Hipchat}}. 
 
 % outline and main point in the rest of the column
 %In this column, we first describe the key characteristics of bots and how they can be used to automate many end user tasks across a wide variety of user domains.  
@@ -372,9 +371,9 @@ We call out this domain because of a quote from Joel Splosky of Stack Overflow\f
 % 	Another challenge they may introduce includes privacy intrusion. 
 
 	Bots, like robots, should do no harm to users.  
-	Asimov's laws for robots~\cite{asimov1950evitable} state that 
-	robots shall not harm humans, robots will obey orders, and robots will protect themselves, which can also apply to software bots.
-	But perhaps these rules are too simple with the complexity and rapid growth of bots in our software ecosystems.  Simple mistakes could have devastating effects, and a user's privacy may be hard to protect.  
+	% Asimov's laws for robots~\cite{asimov1950evitable} state that 
+	% robots shall not harm humans, robots will obey orders, and robots will protect themselves, which can also apply to software bots.
+	But perhaps the famous Asimov's rules are too simple with the complexity and rapid growth of bots in our software ecosystems.  Simple mistakes could have devastating effects, and a user's privacy may be hard to protect.  
 	We can expect to see a code of ethics for human-bot interactions in the near future\footnote{https://www.partnershiponai.org/} \footnote{https://www.knightfoundation.org/press/releases/knight-foundation-omidyar-network-and-linkedin-founder-reid-hoffman-create-27-million-fund-to-research-artificial-intelligence-for-the-public-interest}, but in the meantime, developers should carefully consider how their bots may be misused, either intentionally or unintentionally. Many bots are already seen as malicious, thus building trust with users may also pose a challenge. 
 	For now, many of the platforms that support the creation and distribution of bots also provide developers with basic principles or best practices for bot design (Microsoft\footnote{https://docs.microsoft.com/en-us/bot-framework/}, Facebook\footnote{https://developers.facebook.com/docs/messenger-platform/design-resources}, Slack\footnote{https://api.slack.com/best-practices/}).
 	But developers wishing to use or create bots for their end users need to be careful which bots they bring to life.
