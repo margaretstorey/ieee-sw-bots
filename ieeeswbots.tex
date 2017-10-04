@@ -67,11 +67,25 @@
 
 % create macros for each person based on initials so they can easily
 % add comments to the paper.
-\newcommand{\cl}[1]{\textcolor{blue}{{\it [Carly says: #1]}}}
-\newcommand{\ms}[1]{\textcolor{purple}{{\it [Peggy says: #1]}}}
-\newcommand{\mf}[1]{\textcolor{green}{{\it [Matthieu says: #1]}}}
-\newcommand{\az}[1]{\textcolor{magenta}{{\it [Alexey says: #1]}}}
-\newcommand{\cp}[1]{\textcolor{red}{{\it [Cassie says: #1]}}}
+
+\newboolean{showcomments}
+\setboolean{showcomments}{false}
+
+\ifthenelse{\boolean{showcomments}}
+  {
+        \newcommand{\cl}[1]{\textcolor{blue}{{\it [Carly says: #1]}}}
+        \newcommand{\ms}[1]{\textcolor{purple}{{\it [Peggy says: #1]}}}
+        \newcommand{\mf}[1]{\textcolor{green}{{\it [Matthieu says: #1]}}}
+        \newcommand{\az}[1]{\textcolor{magenta}{{\it [Alexey says: #1]}}}
+        \newcommand{\cp}[1]{\textcolor{red}{{\it [Cassie says: #1]}}}
+}
+{
+        \newcommand{\cl}[1]{}
+        \newcommand{\ms}[1]{}
+        \newcommand{\mf}[1]{}
+        \newcommand{\az}[1]{}
+        \newcommand{\cp}[1]{}
+}
 
 \useunder{\uline}{\ul}{}
 \begin{document}
